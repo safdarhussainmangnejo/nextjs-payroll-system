@@ -6,6 +6,7 @@ import SearchInput from "./SearchInput";
 import Table from "./UserTable";
 import CustomModal from "./CustomModal";
 import MentorEvaluation from "./MentorEvaluation";
+import CustomTable from "./CustomTable";
 
 const AttendanceList: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,6 +44,7 @@ const AttendanceList: React.FC = () => {
         buttonText="Input Mentor Evaluation"
       />
     </div>
+      <CustomTable/>
       {/* <Table onEdit={handleOpenModal} />
       <CustomModal isOpen={isModalOpen} onRequestClose={handleCloseModal} /> */}
     </div>

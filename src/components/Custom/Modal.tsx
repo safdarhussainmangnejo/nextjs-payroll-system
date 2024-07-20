@@ -68,7 +68,7 @@ const Modal: FC = () => {
                       viewBox="0 0 20 20"
                       fill="currentColor"
                       stroke="currentColor"
-                      stroke-width="1"
+                      strokeWidth="1"
                     >
                       <path
                         fill-rule="evenodd"
