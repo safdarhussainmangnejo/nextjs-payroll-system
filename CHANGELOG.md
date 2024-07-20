@@ -1,3 +1,11 @@
+# 1.0.0 (2024-07-20)
+
+
+### Features
+
+* added header, sidebar, modal, tables ([351cf4c](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/351cf4cf8bdff7a888d8cb6e13d3275eaacebec9))
+* made changes in readme file ([1e6a605](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/1e6a6058676f36a5f1a9097a459e08463979a574))
+
 # [3.53.0](https://github.com/ixartz/Next-js-Boilerplate/compare/v3.52.0...v3.53.0) (2024-06-26)
 
 
