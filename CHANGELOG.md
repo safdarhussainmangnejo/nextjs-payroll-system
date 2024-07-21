@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.1.0...v1.2.0) (2024-07-21)
+
+
+### Features
+
+* added dashboard components, cards ([511bd58](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/511bd5803ea55acf4149792c9861f7940628e480))
+
 # [1.1.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.0.0...v1.1.0) (2024-07-21)
 
 
