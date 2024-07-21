@@ -22,6 +22,11 @@
     "loading_guestbook": "Chargement du livre d'or...",
     "error_reporting_powered_by": "Rapport d'erreur propulsé par"
   },
+  "BonusMentor": {
+    "meta_title": "Mentor bonus",
+    "meta_description": "Une page pour le bonus de mentor",
+    "loading_guestbook": "Chargement de bonusmentor..."
+  },
   "GuestbookForm": {
     "username": "Nom d'utilisateur",
     "body": "Message",

@@ -22,6 +22,11 @@
     "loading_guestbook": "Loading guestbook...",
     "error_reporting_powered_by": "Error reporting powered by"
   },
+  "BonusMentor": {
+    "meta_title": "BonusMentor",
+    "meta_description": "A page for mentor bonus",
+    "loading_guestbook": "Loading bonusmentor..."
+  },
   "GuestbookForm": {
     "username": "Username",
     "body": "Body",

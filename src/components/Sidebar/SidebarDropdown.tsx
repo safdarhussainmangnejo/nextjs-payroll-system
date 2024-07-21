@@ -13,7 +13,7 @@ const SidebarDropdown = ({ item }: any) => {
             <Link
               href={item.route}
               className={`group relative flex items-center gap-2.5 rounded-md px-2 mt-5 font-medium text-bodydark2 duration-300 ease-in-out hover:text-black ${
-                pathname === item.route ? "text-white" : ""
+                pathname === item.route ? "text-white bg-graydark" : ""
               }`}
             >
               {item.icon}

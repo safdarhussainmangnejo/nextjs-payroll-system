@@ -18,6 +18,12 @@
 .bg-gray-800 {
   background-color: #1f2937 !important;
 }
+.bg-slate-300 {
+  background-color: #68D4EA !important;
+}
+.light-green {
+  background-color: #74C36E !important;
+}
 
 @layer components {
 }

@@ -1,7 +1,7 @@
 import useColorMode from '@/hooks/useLocalStorage';
 
 const DarkModeSwitcher = () => {
-  const [colorMode, setColorMode] = useColorMode();
+  const [colorMode, setColorMode] = useColorMode("color-theme", "light");
   console.log('colorMode in Header ', colorMode);
   return (
     <li>
