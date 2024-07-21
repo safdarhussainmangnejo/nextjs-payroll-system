@@ -14,7 +14,7 @@ const MentorEvaluation: React.FC<MentorEvaluationProps> = ({ imageSrc, heading, 
       <h1 className="mt-4 text-xl font-bold">{heading}</h1>
       <p className="text-gray-300">{subheading}</p>
       <button className="mt-2 px-4 py-2 bg-gray-800 text-white flex items-center rounded">
-        <img width="25" height="25" src="/icons/upload.jpg" alt="file-upload"/>
+        <img width="20" height="20" src="/icons/upload.jpg" alt="file-upload"/>
         <span className='ml-2'>{buttonText}</span>
       </button>
     </div>

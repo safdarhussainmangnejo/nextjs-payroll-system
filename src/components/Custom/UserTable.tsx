@@ -111,7 +111,7 @@
 // // components/Table.tsx
 import React from "react";
 
-const Table: React.FC<{ onEdit: () => void }> = ({ onEdit }) => {
+const Table: React.FC<{ onEdit?: () => void }> = ({ onEdit }) => {
   const data = [
     {
       no: 1,

@@ -5,10 +5,9 @@ const Input: FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const handleChange = (event: React.FormEvent) => {
-    event.preventDefault();
-    setSearchTerm(event.target.value)
+    // event.preventDefault();
+    // setSearchTerm(event.target.value)
     console.log("Searching for:", searchTerm);
-    // Implement your search logic here
   };
 
   return (
