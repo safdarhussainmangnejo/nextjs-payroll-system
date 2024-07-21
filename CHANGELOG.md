@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.0.0...v1.1.0) (2024-07-21)
+
+
+### Features
+
+* added new table, and icons in sidebar ([4558f8a](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/4558f8a07ca3d26f461b192ed87182c7d42b2b1d))
+* updated readme filr ([3c6e89e](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/3c6e89e9419100e69bb85fa00e41616d29190dfb))
+
 # 1.0.0 (2024-07-20)
 
 
