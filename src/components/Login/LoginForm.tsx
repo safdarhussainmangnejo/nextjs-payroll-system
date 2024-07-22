@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const LoginForm: React.FC = () => {
   return (
     <form className="w-full max-w-[480px]">
       <div className="flex gap-0.5 mt-8 max-w-full text-sm leading-6 w-[480px] max-md:flex-wrap">
-        <label htmlFor="email" className="text-gray-900">Email Address</label>
+        <label htmlFor="email" className="text-gray-900">
+          Email Address
+        </label>
         <span className="text-red-600">*</span>
       </div>
       <input
@@ -15,31 +17,66 @@ const LoginForm: React.FC = () => {
         aria-invalid="true"
         aria-describedby="email-error"
       />
-      <div id="email-error" className="flex gap-1 mt-2.5 max-w-full text-xs leading-5 text-red-600 w-[480px] max-md:flex-wrap">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa452d12a19d318665e97fba3533940cc0cc6e6338e75ef30aadef3bc0ffddc2?apiKey=3134160d320944cb9be378a5d06b0bb6&" alt="" className="shrink-0 aspect-[1.2] w-[18px]" />
+      <div
+        id="email-error"
+        className="flex gap-1 mt-2.5 max-w-full text-xs leading-5 text-red-600 w-[480px] max-md:flex-wrap"
+      >
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/aa452d12a19d318665e97fba3533940cc0cc6e6338e75ef30aadef3bc0ffddc2?apiKey=3134160d320944cb9be378a5d06b0bb6&"
+          alt=""
+          className="shrink-0 aspect-[1.2] w-[18px]"
+        />
         <div className="flex-1 max-md:max-w-full">
           The email you entered is not registered, please check again
         </div>
       </div>
       <div className="flex gap-0.5 mt-6 max-w-full text-sm leading-6 whitespace-nowrap w-[480px] max-md:flex-wrap">
-        <label htmlFor="password" className="text-gray-900">Password</label>
+        <label htmlFor="password" className="text-gray-900">
+          Password
+        </label>
         <span className="text-red-600">*</span>
       </div>
-      <div className="flex gap-2.5 px-5 py-4 mt-2.5 max-w-full rounded-xl border border-gray-200 border-solid w-[480px] max-md:flex-wrap">
-        <input type="password" id="password" className="flex-1 shrink-0 h-5" />
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba593af0359970680554d119704e8febd81b641f0a9556392e4d610b0f08f753?apiKey=3134160d320944cb9be378a5d06b0bb6&" alt="Toggle password visibility" className="shrink-0 w-5 aspect-square" />
+
+      <div className="flex gap-2.5 px-5 py-4 mt-2.5 max-w-full rounded-xl border border-red-600 border-solid w-[480px] max-md:flex-wrap focus-within:border-black">
+        <input
+          type="password"
+          id="password"
+          className="flex-1 min-w-0 px-0 py-0 bg-transparent border-none text-gray-900 focus:ring-0"
+          style={{ outline: "none" }}
+        />
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ba593af0359970680554d119704e8febd81b641f0a9556392e4d610b0f08f753?apiKey=3134160d320944cb9be378a5d06b0bb6&"
+          alt="Toggle password visibility"
+          className="shrink-0 w-5 aspect-square"
+        />
       </div>
+
       <div className="flex gap-4 mt-6 max-w-full text-sm leading-6 text-slate-500 w-[480px] max-md:flex-wrap">
         <div className="flex gap-2">
           <input type="checkbox" id="remember-me" className="sr-only" />
-          <label htmlFor="remember-me" className="flex gap-2 items-center cursor-pointer">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/adfee93b2a1cca7dee4ec144cc18afc637cd9e8e3784c2cf3afece499a865b30?apiKey=3134160d320944cb9be378a5d06b0bb6&" alt="" className="shrink-0 my-auto w-5 aspect-square" />
+          <label
+            htmlFor="remember-me"
+            className="flex gap-2 items-center cursor-pointer"
+          >
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/adfee93b2a1cca7dee4ec144cc18afc637cd9e8e3784c2cf3afece499a865b30?apiKey=3134160d320944cb9be378a5d06b0bb6&"
+              alt=""
+              className="shrink-0 my-auto w-5 aspect-square"
+            />
             <span>Remember Me</span>
           </label>
         </div>
-        <a href="#" className="flex-1 text-right">Forgot Password</a>
+        <a href="#" className="flex-1 text-right">
+          Forgot Password
+        </a>
       </div>
-      <button type="submit" className="justify-center items-center px-6 py-4 mt-8 max-w-full text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap bg-gray-900 rounded-xl w-[480px] max-md:px-5">
+      <button
+        type="submit"
+        className="justify-center items-center px-6 py-4 mt-8 max-w-full text-base font-bold tracking-wide leading-6 text-center text-white whitespace-nowrap bg-gray-800 rounded-xl w-[480px] max-md:px-5"
+      >
         Login
       </button>
     </form>

@@ -8,7 +8,7 @@ const SearchInput: FC = () => {
 
   const handleSearch = (event: React.FormEvent) => {
     event.preventDefault();
-    setSearchTerm(event.currentTarget.value)
+    // setSearchTerm(event.currentTarget.value)
     console.log("Searching for:", searchTerm);
     // Implement your search logic here
   };

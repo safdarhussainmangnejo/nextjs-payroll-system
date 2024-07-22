@@ -1,5 +1,4 @@
 import CustomTable from "@/components/Custom/CustomTable";
-import LoginPage from "@/components/Login/LoginPage";
 import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
 
 export default function DaftarHadir() {

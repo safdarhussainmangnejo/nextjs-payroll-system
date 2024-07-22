@@ -9,7 +9,7 @@ const LoginPage: React.FC = () => {
         <section className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="flex flex-col grow justify-end w-full text-white bg-gray-900 max-md:max-w-full">
             <img loading="lazy" src="/assets/login.png" alt="" className="w-full aspect-[0.99]  max-md:max-w-full" />
-            <div className="flex flex-col justify-center px-12 pt-12 pb-20 border-emerald-500 border-solid border-t-[5px] max-md:px-5 max-md:max-w-full">
+            <div className="flex flex-col justify-center bg-gray-800 px-12 pt-12 pb-20 border-emerald-500 border-solid max-md:px-5 max-md:max-w-full">
               <h1 className="text-5xl font-bold tracking-tight leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
                 Payroll & LMS Kobi Education
               </h1>

@@ -1,45 +1,37 @@
 "use client";
+import RootLayout from "@/app/[locale]/layout";
+import { useModal } from "@/app/ModalContext";
 import CustomTable from "@/components/Custom/CustomTable";
 import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import SearchInput from "@/components/Custom/SearchInput";
+import MentorEvaluationModal from "@/components/MentorEvaluation/MentorEvaluationModel";
 import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 const EvaluasMetor: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openModal } = useModal();
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
+
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
   return (
     <>
-      {/* <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Mentor</h1>
-      <div className="flex">
-        <div className="flex-1 w-32 ...">
-          <h1 className="text-2xl font-bold">Evaluation</h1>
-        </div>
-        <div className="flex-1 w-16 ...">
-          <SearchInput />
-        </div>
-        <div className="flex-1 w-16 ...">
-        <button className="mt-2 px-4 py-2 bg-gray-800 text-white flex items-center rounded">
-        <img width="25" height="25" src="/icons/upload.jpg" alt="file-upload"/>
-        <span className='ml-2'>Add Evaluation</span>
-      </button>
-        </div>
-      </div> */}
+      <div>
+      <h1 className="text-2xl font-bold heading-font-weight-color mb-4">Mentor</h1>
+      </div>
       <div className="p-4">
-        <h1 className="text-2xl font-bold mb-4">Mentor</h1>
+        {/* <h1 className="text-2xl font-bold mb-4">Mentor</h1> */}
         <div className="flex flex-wrap items-center justify-between gap-4">
           {/* flex-1 for equal width distribution, min-w-0 to prevent overflow */}
           <div className="flex-1 min-w-0">
-            <h1 className="text-2xl font-bold truncate">Evaluation</h1>
+            <h1 className="text-2xl font-bold truncate heading-font-weight-color">Evaluation</h1>
           </div>
 
           {/* flex-1 for equal width, but with max-width to control size on larger screens */}
@@ -49,7 +41,7 @@ const EvaluasMetor: React.FC = () => {
 
           {/* flex-1 for equal width, button container flex to center button horizontally */}
           <div className="flex-1 min-w-0 flex justify-center">
-            <button className="px-20 py-2 bg-gray-800 text-white flex items-center rounded">
+            <button className="px-22 py-2 bg-gray-800 text-white flex items-center rounded btn-open-modal" onClick={openModal} >
               <img
                 width="15"
                 height="15"
@@ -68,16 +60,17 @@ const EvaluasMetor: React.FC = () => {
         </div>
       </div>
       <CustomTable columns={columnsAttendanceDat} rows={rowsAttendanceData} />
-    </>
-    // <MentorEvaluation
+   
+    {/* // <MentorEvaluation
     //   imageSrc="/icons/evaluation.png"
     //   heading="No Mentor Evaluation Have Been Recorded"
     //   subheading="Are you sure you want to accept this?"
     //   buttonText="Input Mentor Evaluation"
-    // />
+    // /> */}
 
-    // <Table onEdit={handleOpenModal} />
-    // <CustomModal isOpen={isModalOpen} onRequestClose={handleCloseModal} />
+    {/* <Table onEdit={handleOpenModal} /> */}
+    {/* <MentorEvaluationModal isOpen={isModalOpen} onRequestClose={handleCloseModal} /> */}
+     </>
   );
 };
 
