@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.3.0...v1.4.0) (2024-07-22)
+
+
+### Features
+
+* added Preseni table, modal, and rows, and colums ([0a449b0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/0a449b04ac9333f1e5f680bef46b287518ffb71e))
+
 # [1.3.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.2.0...v1.3.0) (2024-07-21)
 
 
