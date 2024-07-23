@@ -1,16 +1,15 @@
 "use client";
-import RootLayout from "@/app/[locale]/layout";
 import { useModal } from "@/app/ModalContext";
 import CustomTable from "@/components/Custom/CustomTable";
 import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import SearchInput from "@/components/Custom/SearchInput";
-import MentorEvaluationModal from "@/components/MentorEvaluation/MentorEvaluationModel";
 import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
 // import React, { useState } from "react";
 
 const EvaluasMetor: React.FC = () => {
-  const { openModal } = useModal();
+  // const { openModal } = useModal();
+  const { showModal, currentModal } = useModal();
 
   // const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,7 +40,7 @@ const EvaluasMetor: React.FC = () => {
 
           {/* flex-1 for equal width, button container flex to center button horizontally */}
           <div className="flex-1 min-w-0 flex justify-center">
-            <button className="px-22 py-2 bg-gray-800 text-white flex items-center rounded btn-open-modal" onClick={openModal} >
+            <button className="px-22 py-2 bg-gray-800 text-white flex items-center rounded btn-open-modal" onClick={() => showModal('mentorEvaluation')} >
               <img
                 width="15"
                 height="15"
@@ -60,6 +59,7 @@ const EvaluasMetor: React.FC = () => {
         </div>
       </div>
       <CustomTable columns={columnsAttendanceDat} rows={rowsAttendanceData} />
+      {/* {currentModal === 'mentorEvaluation' && <MentorEvaluationModal />} */}
    
     {/* // <MentorEvaluation
     //   imageSrc="/icons/evaluation.png"

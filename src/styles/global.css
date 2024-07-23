@@ -16,6 +16,7 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 .heading-font-weight-color {
   font-family: 'Inter', sans-serif; /* Specify Inter as the primary font */
@@ -28,9 +29,18 @@
   font-weight: normal; /* Set the font weight to regular */
   color: #687588; /* Set the color of the text to a muted blue-gray */
 }
+.cancel-button-class {
+  font-family: "Manrope", sans-serif;
+  font-weight: 16;
+  font-style: bold;
+  color: '#0E1218'
+}
 
 .bg-gray-800 {
-  background-color: #1f2937 !important;
+  background-color: #1f2937;
+  font-family: 'Open Sans', sans-serif; /* Specify Open Sans as the primary font */
+  font-weight: bold;
+  font-size: '16px' !important;
 }
 .bg-slate-300 {
   background-color: #68D4EA !important;

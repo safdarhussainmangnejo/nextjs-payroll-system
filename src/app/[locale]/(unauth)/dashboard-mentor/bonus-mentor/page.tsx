@@ -4,7 +4,7 @@ import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import MentorEvaluation from "@/components/Custom/MentorEvaluation";
 import SearchInput from "@/components/Custom/SearchInput";
-import EvaluationForm from "@/components/MentorEvaluation/EvaluationForm";
+import EvaluationForm from "@/components/Modals/EvaluationForm";
 import { DocumentCategoryEnum } from "@/utils/Constants";
 import { columnsBonusMentor, rowsBonusMentor } from "@/utils/DummyData";
 import React, { useState } from "react";

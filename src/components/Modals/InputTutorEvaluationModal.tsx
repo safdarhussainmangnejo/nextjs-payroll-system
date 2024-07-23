@@ -3,30 +3,31 @@ import { useModal } from "../../app/ModalContext";
 
 // Define the types for the form state
 interface FormData {
-  classCode: string;
-  participantName: string;
+  period: string;
+  score: string;
   tutor: string;
-  date: string;
-  startTime: string;
-  details: string;
+  pros: string;
+  cons: string;
+  masukan: string;
 }
 
-interface CustomModalProps {
-  isOpen: boolean;
-  onRequestClose: () => void;
-}
+// interface CustomModalProps {
+//   isOpen: boolean;
+//   onRequestClose: () => void;
+// }
 
-const MentorEvaluationModal: FC<CustomModalProps> = ({
-  isOpen,
-  onRequestClose,
+const InputTutorEvaluationModal: FC = ({
+  // isOpen,
+  // onRequestClose,
 }) => {
+  const { closeModal } = useModal();
   const [formData, setFormData] = useState<FormData>({
-    classCode: "",
-    participantName: "",
+    period: "",
+    score: "",
     tutor: "",
-    date: "",
-    startTime: "",
-    details: "",
+    pros: "",
+    cons: "",
+    masukan: "",
   });
 
   const handleInputChange = (
@@ -54,55 +55,70 @@ const MentorEvaluationModal: FC<CustomModalProps> = ({
 
   return (
     <div className="relative">
-      {isOpen && (
+      {/* {isOpen && ( */}
       
       <div className="fixed inset-0 z-50 flex">
       {/* Background with opacity */}
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onRequestClose}></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={closeModal}></div>
 
       {/* Modal content positioned on the right */}
       <div className=" flex justify-end h-full fixed inset-0 items-start">
         <form className="w-4/12 p-5 overflow-auto bg-white shadow-xl h-full" onSubmit={handleSubmit}>
               <h2 className="text-2xl heading-font-weight-color leading-8 max-md:max-w-full">
-                Mentor Evaluation
+                Input Tutor Evaluation
               </h2>
-              <div className="mb-4">
+
+              <div className="mb-4 mt-3 relative">
                 <label
-                  htmlFor="classCode"
+                  htmlFor="tutor"
                   className="block text-gray-700 text-sm font-bold mb-2"
                 >
-                  Class Code *
+                  Tutor <span className="text-red-500">*</span>
                 </label>
-                <input
-                  type="text"
-                  id="classCode"
-                  name="classCode"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  value={formData.classCode}
-                  onChange={handleInputChange}
-                  required
-                />
+                <div className="flex items-center">
+                  <select
+                    id="tutor"
+                    name="tutor"
+                    className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                    value={formData.tutor}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select Tutor</option>
+                    <option value="class1">tutor 1</option>
+                    <option value="class2">tutor 2</option>
+                  </select>
+                  <div className="absolute  right-0 flex items-center px-2 pointer-events-none">
+                    <svg
+                      className="fill-current h-4 w-4 text-gray-700"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M5.707 7.293a1 1 0 0 1 1.414 0L10 10.172l2.879-2.879a1 1 0 1 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 0-1.414z" />
+                    </svg>
+                  </div>
+                </div>
               </div>
 
               <div className="mb-4 relative">
                 <label
-                  htmlFor="classCode"
+                  htmlFor="period"
                   className="block text-gray-700 text-sm font-bold mb-2"
                 >
-                  Class Code *
+                  Period <span className="text-red-500">*</span>
                 </label>
                 <div className="flex items-center">
                   <select
-                    id="classCode"
-                    name="classCode"
+                    id="period"
+                    name="period"
                     className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-                    value={formData.classCode}
+                    value={formData.period}
                     onChange={handleInputChange}
                     required
                   >
-                    <option value="">Select Class Code</option>
-                    <option value="class1">Class 1</option>
-                    <option value="class2">Class 2</option>
+                    <option value="">Select Participant</option>
+                    <option value="class1">Period 1</option>
+                    <option value="class2">Period 2</option>
                   </select>
                   <div className="absolute  right-0 flex items-center px-2 pointer-events-none">
                     <svg
@@ -118,101 +134,81 @@ const MentorEvaluationModal: FC<CustomModalProps> = ({
 
               <div className="mb-4">
                 <label
-                  htmlFor="participantName"
+                  htmlFor="score"
                   className="block text-gray-700 text-sm font-bold mb-2"
                 >
-                  Participant's Name *
+                 Score <span className="text-red-500">*</span>
                 </label>
-                <select
-                  id="participantName"
-                  name="participantName"
-                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-                  value={formData.participantName}
+                <input
+                  type="text"
+                  id="score"
+                  name="score"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  value={formData.score}
                   onChange={handleInputChange}
                   required
-                >
-                  <option value="">Select Participant</option>
-                  <option value="participant1">Participant 1</option>
-                  <option value="participant2">Participant 2</option>
-                </select>
+                />
               </div>
 
-              <div className="mb-4">
-                <label
-                  htmlFor="tutor"
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                >
-                  Tutor *
-                </label>
-                <select
-                  id="tutor"
-                  name="tutor"
-                  className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-                  value={formData.tutor}
-                  onChange={handleInputChange}
-                  required
-                >
-                  <option value="">Select Tutor</option>
-                  <option value="tutor1">Tutor 1</option>
-                  <option value="tutor2">Tutor 2</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="date"
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                >
-                  Date, Month, Year *
-                </label>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  value={formData.date}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="startTime"
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                >
-                  Session Start Time *
-                </label>
-                <input
-                  type="time"
-                  id="startTime"
-                  name="startTime"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  value={formData.startTime}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
               <div className="mb-6">
                 <label
-                  htmlFor="details"
+                  htmlFor="pros"
                   className="block text-gray-700 text-sm font-bold mb-2"
                 >
-                  Detail *
+                  Pros <span className="text-red-500">*</span>
                 </label>
                 <textarea
-                  id="details"
-                  name="details"
+                  id="pros"
+                  name="pros"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  rows="4"
-                  value={formData.details}
+                  rows={4}
+                  value={formData.pros}
                   onChange={handleInputChange}
                   required
                 ></textarea>
               </div>
+ 
+              <div className="mb-6">
+                <label
+                  htmlFor="cons"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Cons <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="cons"
+                  name="cons"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  rows={4}
+                  value={formData.cons}
+                  onChange={handleInputChange}
+                  required
+                ></textarea>
+              </div>
+
+              <div className="mb-6">
+                <label
+                  htmlFor="masukan"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Musakan <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="masukan"
+                  name="masukan"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  rows={4}
+                  value={formData.masukan}
+                  onChange={handleInputChange}
+                  required
+                ></textarea>
+              </div>
+
               <div className="flex items-center justify-between">
                 <button
                   type="button"
-                  onClick={onRequestClose}
-                  className="text-gray-900 bg-white w-48 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                  onClick={closeModal}
+                  className=" cancel-button-class bg-white w-48 border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 >
                   Cancel
                 </button>
@@ -226,9 +222,9 @@ const MentorEvaluationModal: FC<CustomModalProps> = ({
             </form>
           </div>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };
 
-export default MentorEvaluationModal;
+export default InputTutorEvaluationModal;

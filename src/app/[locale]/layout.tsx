@@ -1,15 +1,14 @@
-'use client';
+"use client";
 import "@/styles/global.css";
-import React, { useState } from 'react';
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import { NextIntlClientProvider } from 'next-intl';
-import { AppConfig } from '@/utils/AppConfig';
-import Navbar from '@/components/Navbar';
-import Sidebar from '@/components/Sidebar';
-import MentorEvaluationModal from '@/components/MentorEvaluation/MentorEvaluationModel';
-import { ModalProvider, useModal } from '../ModalContext';
-import ContentWithModal from '../ContentWithModal';
+import React, { useState } from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { AppConfig } from "@/utils/AppConfig";
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
+import { ModalProvider } from "../ModalContext";
+import ContentWithModal from "../ContentWithModal";
 
 export default function RootLayout(props: {
   children: React.ReactNode;
@@ -22,13 +21,21 @@ export default function RootLayout(props: {
 
   return (
     <html lang={props.params.locale}>
-      <ModalProvider> {/* Wrap everything inside ModalProvider */}
+      <ModalProvider>
+        {" "}
+        {/* Wrap everything inside ModalProvider */}
         <body>
           <NextIntlClientProvider locale={props.params.locale}>
             <div className="flex">
-              <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+              <Sidebar
+                sidebarOpen={sidebarOpen}
+                setSidebarOpen={setSidebarOpen}
+              />
               <div className="relative flex flex-1 flex-col lg:ml-72.5">
-                <Navbar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+                <Navbar
+                  sidebarOpen={sidebarOpen}
+                  setSidebarOpen={setSidebarOpen}
+                />
                 <main>
                   <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
                     {props.children}
@@ -38,9 +45,19 @@ export default function RootLayout(props: {
             </div>
           </NextIntlClientProvider>
         </body>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script>
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/ripple.js"></script>
+        <script src="node_modules/@material-tailwind/html@latest/scripts/dialog.js"></script>
+        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/dialog.js"></script>
+        Usage
         <ContentWithModal />
-    </ModalProvider>
-      </html>
+      </ModalProvider>
+    </html>
   );
 }
 
@@ -50,7 +67,6 @@ export default function RootLayout(props: {
 //     <MentorEvaluationModal isOpen={isModalOpen} onRequestClose={closeModal} />
 //   );
 // }
-
 
 // "use client";
 // import "@/styles/global.css";
