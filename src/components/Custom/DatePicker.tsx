@@ -6,7 +6,7 @@ const DatePicker = () => {
   useEffect(() => {
     // Init flatpickr
     flatpickr(".form-datepicker", {
-      mode: "single",
+      mode: "range",
       static: true,
       monthSelectorType: "static",
       dateFormat: "M j, Y",

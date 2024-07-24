@@ -2,13 +2,13 @@
 import { useModal } from "@/app/ModalContext";
 import CustomTable from "@/components/Custom/CustomTable";
 import DatePicker from "@/components/Custom/DatePicker";
-import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import SearchInput from "@/components/Custom/SearchInput";
-import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
+import { DocumentCategoryEnum } from "@/utils/Constants";
+import {columnsStudentAccount, rowsStudentAccount } from "@/utils/DummyData";
 // import React, { useState } from "react";
 
-const EvaluasMetor: React.FC = () => {
+const StudentAccount: React.FC = () => {
   // const { openModal } = useModal();
   const { showModal, currentModal } = useModal();
 
@@ -25,7 +25,7 @@ const EvaluasMetor: React.FC = () => {
     <>
       <div>
         <h1 className="text-2xl font-bold heading-font-weight-color mb-4">
-          Mentor
+          Setting/Account
         </h1>
       </div>
       <div className="p-4">
@@ -34,7 +34,7 @@ const EvaluasMetor: React.FC = () => {
           {/* flex-1 for equal width distribution, min-w-0 to prevent overflow */}
           <div className="flex-1 min-w-0">
             <h1 className="text-2xl font-bold truncate heading-font-weight-color">
-              Evaluation
+              Student Account
             </h1>
           </div>
 
@@ -81,7 +81,7 @@ const EvaluasMetor: React.FC = () => {
               </div>
             </div>
       </div>
-      <CustomTable columns={columnsAttendanceDat} rows={rowsAttendanceData} />
+      <CustomTable columns={columnsStudentAccount} rows={rowsStudentAccount} tableType={DocumentCategoryEnum.StudentAccount} />
       {/* {currentModal === 'mentorEvaluation' && <MentorEvaluationModal />} */}
 
       {/* // <MentorEvaluation
@@ -94,4 +94,4 @@ const EvaluasMetor: React.FC = () => {
   );
 };
 
-export default EvaluasMetor;
+export default StudentAccount;

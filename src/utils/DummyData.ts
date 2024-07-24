@@ -1,3 +1,5 @@
+import type { input } from "@material-tailwind/react";
+
 export const columnsAttendanceDat = [
   { id: "no", label: "No", minWidth: 50 },
   { id: "date", label: "Date", minWidth: 100 },
@@ -103,4 +105,48 @@ export const rowsTutorAttendance = [
   {id: 6, email: 'hanna@unpixet.com', name: 'Hanna Un', date: '03 Mar 2023', time: '14:00 WB', class: 'Masterclass', duration:'60 Minit', extraDuration: '60 Minit',  rejectionReason: 'Tulis alasan disini', status: 'Rejected'},
   {id: 7, email: 'hanna@unpixet.com', name: 'Hanna Un', date: '03 Mar 2023', time: '14:00 WB', class: 'Masterclass', duration:'60 Minit', extraDuration: '60 Minit',  rejectionReason: 'Tulis alasan disini', status: 'Accepted'},
   {id: 8, email: 'hanna@unpixet.com', name: 'Hanna Un', date: '03 Mar 2023', time: '14:00 WB', class: 'Masterclass', duration:'60 Minit', extraDuration: '60 Minit',  rejectionReason: 'Tulis alasan disini', status: 'Processed'}
+]
+
+
+// Evaluasi Tutor Rows and Colums
+export const columnsEvaluasiTutor = [
+  { id: 'no', label: 'No', minWidth: 10 },
+  { id: 'tutor', label: 'Tutor', minWidth: 160 },
+  { id: 'period', label: 'Period', minWidth: 80 },
+  { id: 'score', label: "Score", minWidth: 40 },
+  { id: 'pros', label: 'Pros', minWidth: 40 },
+  { id: 'cons', label: 'Cons', minWidth: 40 },
+  { id: 'input', label: 'Input', minWidth: 40 },
+  { id: 'actions', label: 'Actions', minWidth: 100 }
+];
+
+export const rowsEvaluasiTutor = [
+  {id: 1, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 2, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 3, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 4, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 5, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 6, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 7, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+  {id: 8, email: 'hanna@unpixet.com', name: 'Hanna Un', period: 'Oktober - Desember', score: '4.5', pros: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', cons:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo', input: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sapien felis, commodo' },
+]
+
+// Evaluasi Tutor Rows and Colums
+export const columnsStudentAccount = [
+  { id: 'no', label: 'No', minWidth: 10 },
+  { id: 'name', label: 'Name', minWidth: 160 },
+  { id: 'email', label: 'Address', minWidth: 150 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+
+export const rowsStudentAccount = [
+  {id: 1, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 2, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 3, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 4, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 5, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 6, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 7, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+  {id: 8, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
+ 
 ]

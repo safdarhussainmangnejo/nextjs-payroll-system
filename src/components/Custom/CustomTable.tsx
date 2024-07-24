@@ -1,8 +1,11 @@
+'use client';
 import React, { ReactNode } from "react";
 import TableRow from "../Datatable/TableRow";
 import { DocumentCategoryEnum } from "../../utils/Constants";
 import BonusTableRow from "../BonusMentorTable/BonusRows";
 import PreseniRows from "../BonusMentorTable/PresensiRows";
+import EvaluasiTutorRows from "../BonusMentorTable/EvaluasiTutorRows";
+import StudentAccountRows from "../BonusMentorTable/StudentAccountRows";
 interface Column {
   id: string;
   label: string;
@@ -25,7 +28,7 @@ const CustomTable = ({
   rows,
   onEditClick,
   onDeleteClick,
-  onViewClick,
+  onViewClick = () => console.log("onViewClick is not defined"),
   tableType,
 }: DataTableProps) => {
 
@@ -65,6 +68,11 @@ const CustomTable = ({
                               <BonusTableRow data={row} />
                             ) : tableType === DocumentCategoryEnum.Presensi ? (
                               <PreseniRows data={row} />
+                            ) :  tableType === DocumentCategoryEnum.EvaluasiTutor ? (
+                              <EvaluasiTutorRows data={row} />
+                            ) :
+                             tableType === DocumentCategoryEnum.StudentAccount ? (
+                              <StudentAccountRows data={row} />
                             ) :
                              (
                               <TableRow data={row} />
@@ -75,6 +83,7 @@ const CustomTable = ({
                                   src="/icons/view.png"
                                   alt="View"
                                   className="w-8 h-8 cursor-pointer"
+                                  onClick={() => onViewClick(row)}
                                 />
                                 <img
                                   src="/icons/edit.png"

@@ -18,6 +18,7 @@ const CustomModal: FC<CustomModalProps> = ({ isOpen, onRequestClose }) => {
     >
       <div className="bg-white rounded-lg mt-7 p-6 w-full max-w-md max-h-full overflow-y-auto">
         <h1 className="text-2xl font-bold mb-4">Others</h1>
+
         <div className="p-4 block max-w-sm bg-white rounded-lg border-[1.5px] border-stroke bg-transparent border-inherit mb-6 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-xl font-semibold">Other Edit</h2>
@@ -33,6 +34,7 @@ const CustomModal: FC<CustomModalProps> = ({ isOpen, onRequestClose }) => {
             </svg>
           </div>
           <hr className="my-4 border-[1.5px] border-stroke bg-transparent dark:bg-gray-700" />
+
           <div className="flex">
             <div className="flex-1 w-64">
               <span className="text-gray-500">Mentor’s Name</span>
@@ -41,6 +43,7 @@ const CustomModal: FC<CustomModalProps> = ({ isOpen, onRequestClose }) => {
               <span className="block text-black dark:text-white">Nama User</span>
             </div>
           </div>
+
           <div className="flex mt-3">
             <div className="flex-1 w-64">
               <span className="text-gray-500">Date of Filing</span>
@@ -49,7 +52,9 @@ const CustomModal: FC<CustomModalProps> = ({ isOpen, onRequestClose }) => {
               <span className="block text-black dark:text-white">23 Oktober 2023</span>
             </div>
           </div>
+          
         </div>
+
         <div className="flex flex-col gap-5">
           <div>
             <label className="mb-2 block text-sm font-medium text-black dark:text-white">
