@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.4.0...v1.5.0) (2024-07-23)
+
+
+### Features
+
+* added new component in evaluas tutor, added new dropdown, and date picker ([a33df43](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/a33df4347898ba067b7534e5724cc1d9bb965ece))
+
 # [1.4.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.3.0...v1.4.0) (2024-07-22)
 
 
