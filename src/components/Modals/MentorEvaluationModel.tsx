@@ -196,7 +196,7 @@ const MentorEvaluationModal: FC = ({
                   id="details"
                   name="details"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  rows="4"
+                  rows={4}
                   value={formData.details}
                   onChange={handleInputChange}
                   required

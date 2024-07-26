@@ -6,6 +6,7 @@ import BonusTableRow from "../BonusMentorTable/BonusRows";
 import PreseniRows from "../BonusMentorTable/PresensiRows";
 import EvaluasiTutorRows from "../BonusMentorTable/EvaluasiTutorRows";
 import StudentAccountRows from "../BonusMentorTable/StudentAccountRows";
+import SessionPackageDataRows from "../BonusMentorTable/SessionPackageDataRows";
 interface Column {
   id: string;
   label: string;
@@ -73,6 +74,9 @@ const CustomTable = ({
                             ) :
                              tableType === DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
+                            ) :
+                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData  ? (
+                              <SessionPackageDataRows data={row} />
                             ) :
                              (
                               <TableRow data={row} />

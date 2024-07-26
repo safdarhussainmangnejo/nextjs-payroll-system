@@ -149,4 +149,45 @@ export const rowsStudentAccount = [
   {id: 7, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
   {id: 8, email: 'hanna@unpixet.com', name: 'Syarifah Nurbati' },
  
-]
+];
+
+// Session and Package Data Rows and Colums
+export const columnsSessionPackageData = [
+  { id: 'no', label: 'No', minWidth: 10 },
+  { id: 'package', label: 'Package', minWidth: 160 },
+  { id: 'sessionQuantity', label: 'Session Quantity', minWidth: 150 },
+  { id: 'packageQuantity', label: 'Package Quantity', minWidth: 150 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+
+export const rowsSessionPackageData = [
+  {id: 1, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 2, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 3, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 4, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 5, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 6, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id: 7, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  {id:81, package: 'KQWI WIT 2', sessionQuantity: 11, packageQuantity: 4 },
+  
+];
+
+// Class Data Data Rows and Colums
+export const columnsClassData = [
+  { id: 'no', label: 'No', minWidth: 10 },
+  { id: 'class', label: 'Class Name', minWidth: 160 },
+  { id: 'period', label: 'Period Kelas', minWidth: 150 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+
+export const rowsClassData = [
+  {id: 1, class: 'Class Name', period: 'September - October'},
+  {id: 2, class: 'Class Name', period: 'September - October'},
+  {id: 3, class: 'Class Name', period: 'September - October'},
+  {id: 4, class: 'Class Name', period: 'September - October'},
+  {id: 5, class: 'Class Name', period: 'September - October'},
+  {id: 6, class: 'Class Name', period: 'September - October'},
+  {id: 7, class: 'Class Name', period: 'September - October'},
+  {id: 8, class: 'Class Name', period: 'September - October'},
+  
+];

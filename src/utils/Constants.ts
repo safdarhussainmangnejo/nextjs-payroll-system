@@ -5,6 +5,8 @@ export const DocumentCategoryEnum = {
   Presensi: 'Presensi',
   EvaluasiTutor: 'Evaluasi Tutor',
   StudentAccount: 'Student Account',
+  SessionPackageData: 'Session Package Data',
+  ClassData: 'Class Data',
 }
 
 export const FORMMODE = {
