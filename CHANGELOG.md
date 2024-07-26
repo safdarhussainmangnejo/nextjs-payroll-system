@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.6.0...v1.7.0) (2024-07-26)
+
+
+### Features
+
+* added class data, session package data pages, added new modals, and table rows ([d8e54db](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/d8e54db91698742614b09b6b1132eb638e62554f))
+
 # [1.6.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.5.0...v1.6.0) (2024-07-24)
 
 
