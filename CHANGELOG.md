@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.5.0...v1.6.0) (2024-07-24)
+
+
+### Features
+
+* added student account page, and other pages ([06d8152](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/06d8152f517baaa4d203fedf34faaef4bb3a6d97))
+
 # [1.5.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.4.0...v1.5.0) (2024-07-23)
 
 
