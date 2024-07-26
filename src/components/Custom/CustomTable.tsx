@@ -75,7 +75,7 @@ const CustomTable = ({
                              tableType === DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
                             ) :
-                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData  ? (
+                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData || DocumentCategoryEnum.AddMetor  ? (
                               <SessionPackageDataRows data={row} />
                             ) :
                              (

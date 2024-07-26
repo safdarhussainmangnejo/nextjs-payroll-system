@@ -1,7 +1,7 @@
 // src/app/ModalContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type ModalType = 'mentorEvaluation' | 'inputTutorEvaluation' | 'addStudentAccount' | null;
+type ModalType = 'mentorEvaluation' | 'inputTutorEvaluation' | 'addStudentAccount' | 'addTutor' |'addMetor'| null;
 interface ModalContextType {
   // isModalOpen: boolean;
   // openModal: () => void;
@@ -9,6 +9,7 @@ interface ModalContextType {
   showModal: (modalType: ModalType) => void;
   closeModal: () => void;
   currentModal: ModalType;
+  
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -19,6 +20,7 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   // const openModal = () => setIsModalOpen(true);
   // const closeModal = () => setIsModalOpen(false);
   const [currentModal, setCurrentModal] = useState<ModalType>(null);
+  // const [data, setData] = useState<ModalContextType>({});
 
   const showModal = (modalType: ModalType) => {
     setCurrentModal(modalType);

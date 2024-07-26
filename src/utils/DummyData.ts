@@ -191,3 +191,24 @@ export const rowsClassData = [
   {id: 8, class: 'Class Name', period: 'September - October'},
   
 ];
+
+// Class Data Mentor Rows and Colums
+export const columnsAddMentor= [
+  { id: 'no', label: 'No', minWidth: 10 },
+  { id: 'classCode', label: 'Class Code', minWidth: 160 },
+  { id: 'className', label: 'Class Name', minWidth: 150 },
+  { id: 'classPeriod', label: 'class Period', minWidth: 150 },
+  { id: 'service', label: 'Service', minWidth: 150 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+export const rowsAddMentor= [
+  {id:1, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:2, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:3, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:4, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:5, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:6, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:7, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+  {id:8, classCode: 'Class Code', className: 'Class Name', classPeriod: 'September - October', service:'Service Here'},
+
+]

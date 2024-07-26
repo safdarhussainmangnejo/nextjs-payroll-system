@@ -7,6 +7,15 @@ export const DocumentCategoryEnum = {
   StudentAccount: 'Student Account',
   SessionPackageData: 'Session Package Data',
   ClassData: 'Class Data',
+  AddMetor: 'Add Metor',
+  Database: 'Database',
+}
+export const ModalsEnumeration = {
+  MentorEvaluation: 'Mentor Evaluation',
+  InputTutorEvaluation: 'Input Tutor Evaluation',
+  AddStudentAccount: 'Add Student Account',
+  AddTutor: 'Add Tutor',
+  AddMetor: 'Add Metor',
 }
 
 export const FORMMODE = {

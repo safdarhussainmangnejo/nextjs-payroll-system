@@ -8,6 +8,10 @@ interface TableRowProps {
     packageQuantity: string;
     class: string;
     period: string;
+    classCode: string;
+    className: string;
+    classPeriod: string;
+    service: string;
   };
 }
 
@@ -21,15 +25,21 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({ data }: TableRowProps
       </td>
 
       <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data.package || data.class}
+        {data.package || data.class || data.classCode}
       </td>
 
       <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data.sessionQuantity || data.period}
+        {data?.sessionQuantity || data?.period || data?.className}
       </td>
-      {data?.packageQuantity && 
+      {(data?.packageQuantity || data?.classPeriod) && 
       <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data.packageQuantity}
+        {data.packageQuantity || data?.classPeriod }
+      </td>
+
+      }
+      {(data?.service) && 
+      <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+        {data?.service }
       </td>
       }
     </>
