@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.7.0...v1.8.0) (2024-07-26)
+
+
+### Features
+
+* modal for class data, add tutor, add mentor modal, table for mentor ([8e2c55b](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/8e2c55bf9929d631d8192bcd92c6f6ee33175410))
+
 # [1.7.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.6.0...v1.7.0) (2024-07-26)
 
 
