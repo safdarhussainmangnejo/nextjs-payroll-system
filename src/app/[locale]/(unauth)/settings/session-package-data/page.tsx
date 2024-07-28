@@ -5,12 +5,12 @@ import DatePicker from "@/components/Custom/DatePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import SearchInput from "@/components/Custom/SearchInput";
 import { DocumentCategoryEnum } from "@/utils/Constants";
-import { columnsSessionPackageData, columnsStudentAccount, rowsSessionPackageData, rowsStudentAccount } from "@/utils/DummyData";
+import { columnsSessionPackageData, rowsSessionPackageData } from "@/utils/DummyData";
 // import React, { useState } from "react";
 
 const SessionPackageData: React.FC = () => {
   // const { openModal } = useModal();
-  const { showModal, currentModal } = useModal();
+  const { showModal } = useModal();
 
   return (
     <>
