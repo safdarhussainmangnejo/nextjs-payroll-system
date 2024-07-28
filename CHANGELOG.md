@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.10.0...v1.11.0) (2024-07-28)
+
+
+### Features
+
+* integrated sentry app ([0f0308d](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/0f0308d82cf7f0bfd36a02629a20b8c9970e0582))
+
 # [1.10.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.9.0...v1.10.0) (2024-07-28)
 
 
