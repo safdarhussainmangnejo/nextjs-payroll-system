@@ -2,7 +2,6 @@
 import { useModal } from "@/app/ModalContext";
 import CustomTable from "@/components/Custom/CustomTable";
 import DatePicker from "@/components/Custom/DatePicker";
-import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import SearchInput from "@/components/Custom/SearchInput";
 import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
@@ -10,7 +9,7 @@ import { columnsAttendanceDat, rowsAttendanceData } from "@/utils/DummyData";
 
 const EvaluasMetor: React.FC = () => {
   // const { openModal } = useModal();
-  const { showModal, currentModal } = useModal();
+  const { showModal } = useModal();
 
   // const [isModalOpen, setIsModalOpen] = useState(false);
 

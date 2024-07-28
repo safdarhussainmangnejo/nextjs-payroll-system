@@ -5,8 +5,8 @@ import DatePicker from "@/components/Custom/DatePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import MentorEvaluation from "@/components/Custom/MentorEvaluation";
 import SearchInput from "@/components/Custom/SearchInput";
-import { DocumentCategoryEnum, DocumentRowsEnum } from "@/utils/Constants";
-import { columnsDatabaseFee, columnsDatabaseMentor, columnsDatabaseStudent, columnsStudentAccount, rowsDatabaseFee, rowsDatabaseMentor, rowsDatabaseStudent, rowsStudentAccount } from "@/utils/DummyData";
+import {DocumentRowsEnum } from "@/utils/Constants";
+import { columnsDatabaseFee, columnsDatabaseMentor, columnsDatabaseStudent, rowsDatabaseFee, rowsDatabaseMentor, rowsDatabaseStudent } from "@/utils/DummyData";
 import { useState } from "react";
 // import React, { useState } from "react";
 

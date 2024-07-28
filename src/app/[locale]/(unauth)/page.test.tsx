@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import { NextIntlClientProvider } from 'next-intl';
+import { render } from '@testing-library/react';
+// import { NextIntlClientProvider } from 'next-intl';
 
-import messages from '@/locales/en.json';
+// import messages from '@/locales/en.json';
 
 import Index from './page';
 

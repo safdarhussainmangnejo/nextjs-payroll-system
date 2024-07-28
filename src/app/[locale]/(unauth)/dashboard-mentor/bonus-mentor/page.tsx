@@ -4,21 +4,20 @@ import DateRangePicker from "@/components/Custom/DateRangePicker";
 import Dropdown from "@/components/Custom/Dropdown";
 import MentorEvaluation from "@/components/Custom/MentorEvaluation";
 import SearchInput from "@/components/Custom/SearchInput";
-import EvaluationForm from "@/components/Modals/EvaluationForm";
 import { DocumentCategoryEnum } from "@/utils/Constants";
 import { columnsBonusMentor, rowsBonusMentor } from "@/utils/DummyData";
-import React, { useState } from "react";
+import React from "react";
 
 const BonusMentor: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
   return (
     <>
     <div className="">

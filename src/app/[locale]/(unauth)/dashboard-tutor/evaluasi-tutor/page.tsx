@@ -11,7 +11,7 @@ import { columnsEvaluasiTutor, rowsEvaluasiTutor } from "@/utils/DummyData";
 import React, { useState } from "react";
 
 const EvaluasTutor: React.FC = () => {
-  const { showModal, currentModal } = useModal();
+  const { showModal } = useModal();
   const [selectedRow, setSelectedRow] = useState<any>(null);
   const [mode, setMode] = useState(FORMMODE.Disabled);
 

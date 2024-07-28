@@ -10,7 +10,7 @@ import { columnsStudentAccount, rowsStudentAccount } from "@/utils/DummyData";
 
 const StudentAccount: React.FC = () => {
   // const { openModal } = useModal();
-  const { showModal, currentModal } = useModal();
+  const { showModal } = useModal();
 
   // const [isModalOpen, setIsModalOpen] = useState(false);
 
