@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.9.0...v1.10.0) (2024-07-28)
+
+
+### Features
+
+* installed eslint ([e3308a7](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/e3308a7dfd9498963b6724f7aba12ce138b0d684))
+
 # [1.9.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.8.0...v1.9.0) (2024-07-28)
 
 
