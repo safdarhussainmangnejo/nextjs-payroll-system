@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.8.0...v1.9.0) (2024-07-28)
+
+
+### Features
+
+* added database page, tutor, mentor, fee, student pages and tables ([5cfccb0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/5cfccb0e81a3d49c74ba160c049cb981643c3587))
+
 # [1.8.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.7.0...v1.8.0) (2024-07-26)
 
 
