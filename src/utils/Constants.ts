@@ -10,12 +10,20 @@ export const DocumentCategoryEnum = {
   AddMetor: 'Add Metor',
   Database: 'Database',
 }
+
+export const DocumentRowsEnum = {
+  DatabaseStudent: 'Database Student',
+  DatabaseMentor: 'Database Mentor',
+  DatabaseFee: 'Database Fee',
+}
+
 export const ModalsEnumeration = {
   MentorEvaluation: 'Mentor Evaluation',
   InputTutorEvaluation: 'Input Tutor Evaluation',
   AddStudentAccount: 'Add Student Account',
   AddTutor: 'Add Tutor',
   AddMetor: 'Add Metor',
+  AddDatabaseTutorMetor: 'Add Database Tutor Metor',
 }
 
 export const FORMMODE = {

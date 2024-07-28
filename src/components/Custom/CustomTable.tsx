@@ -1,7 +1,7 @@
 'use client';
 import React, { ReactNode } from "react";
 import TableRow from "../Datatable/TableRow";
-import { DocumentCategoryEnum } from "../../utils/Constants";
+import { DocumentCategoryEnum, DocumentRowsEnum } from "../../utils/Constants";
 import BonusTableRow from "../BonusMentorTable/BonusRows";
 import PreseniRows from "../BonusMentorTable/PresensiRows";
 import EvaluasiTutorRows from "../BonusMentorTable/EvaluasiTutorRows";
@@ -75,7 +75,8 @@ const CustomTable = ({
                              tableType === DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
                             ) :
-                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData || DocumentCategoryEnum.AddMetor  ? (
+                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData || 
+                             DocumentCategoryEnum.AddMetor || DocumentRowsEnum.DatabaseStudent   ? (
                               <SessionPackageDataRows data={row} />
                             ) :
                              (

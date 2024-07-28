@@ -4,6 +4,7 @@ import InputTutorEvaluationModal from "@/components/Modals/InputTutorEvaluationM
 import StudentAccountnModal from "@/components/Modals/StudentAccountModal";
 import AddTutorModal from "@/components/Modals/AddTutorModal";
 import AddMentorModal from "@/components/Modals/AddMentorModal";
+import InputDatabaseTutorMentorModal from "@/components/Modals/InputDatabaseTutorMentorModal.";
 
 const ContentWithModal= () => {
   const { showModal, currentModal } = useModal();
@@ -23,6 +24,8 @@ const ContentWithModal= () => {
       {currentModal === 'addStudentAccount' && <StudentAccountnModal />}
       {currentModal === 'addTutor' && <AddMentorModal />}
       {currentModal === 'addMetor' && <AddMentorModal />}
+      {currentModal === 'addFee' && <AddTutorModal />}
+      {currentModal === 'addDatabaseTutorMentor' && <InputDatabaseTutorMentorModal />}
     {/* {documentType === DocumentCategoryEnum.EvaluasTutor ? 
       (<InputTutorEvaluationModal isOpen={isModalOpen} onRequestClose={closeModal}/>)
       :
