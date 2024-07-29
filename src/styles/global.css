@@ -35,12 +35,16 @@
   font-style: bold;
   color: '#0E1218'
 }
+.viewlist-button-class {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 14;
+  background-color: #064C85;
+}
 
 .bg-gray-800 {
   background-color: #1f2937;
   font-family: 'Open Sans', sans-serif; /* Specify Open Sans as the primary font */
-  font-weight: bold;
-  font-size: '16px' !important;
+  font-size: '6px' !important;
 }
 .bg-slate-300 {
   background-color: #68D4EA !important;
@@ -51,6 +55,10 @@
 .bg-red-text {
   background-color: #FFEDEC;
   color: #E03137 !important;
+}
+.redchip {
+  background-color: rgb(254 226 226);
+  color: rgb(153 27 27);
 }
 
 @layer components {

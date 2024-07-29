@@ -9,12 +9,14 @@ export const DocumentCategoryEnum = {
   ClassData: 'Class Data',
   AddMetor: 'Add Metor',
   Database: 'Database',
+  RequestSchedule: 'RequestSchedule',
 }
 
 export const DocumentRowsEnum = {
   DatabaseStudent: 'Database Student',
   DatabaseMentor: 'Database Mentor',
   DatabaseFee: 'Database Fee',
+  RequestScheduleTimeList: 'Request Schedule Time List',
 }
 
 export const ModalsEnumeration = {

@@ -275,3 +275,41 @@ export const rowsDatabaseFee= [
   {id:8, productName: 'Proofreading', fee: 70000,},
   
 ];
+
+// Request Schedule Rows and Colums
+export const columnsRequestScheduleMentor= [
+  // { id: 'no', label: 'No', minWidth: 50 },
+  { id: 'employeeName', label: 'Employee Name', minWidth: 140 },
+  { id: 'from', label: 'From', minWidth: 60 },
+  { id: 'to', label: 'To', minWidth: 60 },
+  { id: 'total', label: 'Total', minWidth: 60 },
+  { id: 'status', label: 'Status', minWidth: 130 },
+  { id: 'actions', label: 'Actions', minWidth: 50 }
+];
+export const rowsRequestScheduleMentor = [
+  {id:1, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  {id:2, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  {id:3, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Pending'},
+  {id:4, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  {id:5, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  {id:6, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Pending'},
+  {id:7, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  {id:8, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '01 Mar 2023', to:'03 Mar 2023', total: '3 Days', status: 'Approve'},
+  
+];
+
+// Request Schedule Details Rows and Colums
+export const columnsRequestScheduleTimeList= [
+  // { id: 'no', label: 'No', minWidth: 50 },
+  { id: 'date', label: 'Date', minWidth: 140 },
+  { id: 'from', label: 'From', minWidth: 80 },
+  { id: 'to', label: 'To', minWidth: 80 },
+  { id: 'status', label: 'Status', minWidth: 130 },
+  { id: 'actions', label: 'Actions', minWidth: 50 }
+];
+export const rowsRequestScheduleTimeList = [
+  {id:1, date: '01 Mar 2023', from: '08:00 WIB', to:'09:00 WIB', status: 'Fix Schedule'},
+  {id:2, date: '01 Mar 2023', from: '08:00 WIB', to:'09:00 WIB', status: 'Not Used'},
+  {id:3, date: '01 Mar 2023', from: '08:00 WIB', to:'09:00 WIB', status: 'Fix Schedule'},
+
+];

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { ReactNode } from "react";
 import TableRow from "../Datatable/TableRow";
 import { DocumentCategoryEnum, DocumentRowsEnum } from "../../utils/Constants";
@@ -29,10 +29,9 @@ const CustomTable = ({
   rows,
   onEditClick,
   onDeleteClick,
-  onViewClick = () => console.log("onViewClick is not defined"),
+  onViewClick = () => console.log("onViewClick clicked"),
   tableType,
 }: DataTableProps) => {
-
   return (
     <>
       {rows && (
@@ -44,6 +43,17 @@ const CustomTable = ({
                   <table className="table-auto min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead className="bg-gray-50 border-[1.5px] border-stroke bg-transparen dark:bg-gray-800">
                       <tr>
+                        {tableType === DocumentCategoryEnum.RequestSchedule && (
+                          <div className="flex items-center mt-4 pl-3">
+                            <input
+                              id="default-checkbox"
+                              type="checkbox"
+                              value=""
+                              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                            />
+                          </div>
+                        )}
+
                         {columns &&
                           columns.map((column) => (
                             <th
@@ -65,21 +75,39 @@ const CustomTable = ({
                             className="border-[1.5px] border-stroke bg-transparen"
                             key={row.id}
                           >
+                            {tableType ===
+                              DocumentCategoryEnum.RequestSchedule && (
+                              <div className="flex items-center mt-7 pl-3">
+                                <input
+                                  id={row.id}
+                                  type="checkbox"
+                                  value=""
+                                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                />
+                              </div>
+                            )}
                             {tableType === DocumentCategoryEnum.BonusMentor ? (
                               <BonusTableRow data={row} />
                             ) : tableType === DocumentCategoryEnum.Presensi ? (
                               <PreseniRows data={row} />
-                            ) :  tableType === DocumentCategoryEnum.EvaluasiTutor ? (
+                            ) : tableType ===
+                              DocumentCategoryEnum.EvaluasiTutor ? (
                               <EvaluasiTutorRows data={row} />
-                            ) :
-                             tableType === DocumentCategoryEnum.StudentAccount ? (
+                            ) : tableType ===
+                              DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
-                            ) :
-                             tableType === DocumentCategoryEnum.SessionPackageData || DocumentCategoryEnum.ClassData || 
-                             DocumentCategoryEnum.AddMetor || DocumentRowsEnum.DatabaseStudent   ? (
-                              <SessionPackageDataRows data={row} />
-                            ) :
-                             (
+                            ) : tableType ===
+                                DocumentCategoryEnum.SessionPackageData ||
+                              DocumentCategoryEnum.ClassData ||
+                              DocumentCategoryEnum.AddMetor ||
+                              DocumentRowsEnum.DatabaseStudent ||
+                              DocumentCategoryEnum.RequestSchedule ||
+                              DocumentRowsEnum.RequestScheduleTimeList ? (
+                              <SessionPackageDataRows
+                                data={row}
+                                tableType={tableType}
+                              />
+                            ) : (
                               <TableRow data={row} />
                             )}
                             <td className="px-4 py-4 text-sm whitespace-nowrap">
@@ -90,17 +118,21 @@ const CustomTable = ({
                                   className="w-8 h-8 cursor-pointer"
                                   onClick={() => onViewClick(row)}
                                 />
-                                <img
-                                  src="/icons/edit.png"
-                                  alt="Edit"
-                                  className="w-8 h-8 cursor-pointer"
-                                  onClick={onEditClick}
-                                />
-                                <img
-                                  src="/icons/delete.png"
-                                  alt="Delete"
-                                  className="w-8 h-8 cursor-pointer"
-                                />
+                                {tableType != DocumentCategoryEnum.RequestSchedule && (
+                                  <>
+                                    <img
+                                      src="/icons/edit.png"
+                                      alt="Edit"
+                                      className="w-8 h-8 cursor-pointer"
+                                      onClick={onEditClick}
+                                    />
+                                    <img
+                                      src="/icons/delete.png"
+                                      alt="Delete"
+                                      className="w-8 h-8 cursor-pointer"
+                                    />
+                                  </>
+                                )}
                               </div>
                             </td>
                           </tr>
