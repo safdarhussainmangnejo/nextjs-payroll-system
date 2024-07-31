@@ -1,4 +1,4 @@
-import { DocumentCategoryEnum, DocumentRowsEnum } from "@/utils/Constants";
+import { DocumentCategoryEnum } from "@/utils/Constants";
 import React, { useState } from "react";
 
 interface TableRowProps {
@@ -186,7 +186,7 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
                 : data.paymentMethod === "Lunas"
                   ? "bg-green-100 text-green-800"
                   : data.paymentMethod === "Stop"
-                    ? "bg-red-text"
+                    ? "redchip"
                     : "bg-gray-100 text-gray-800"
             }`}
           >
@@ -195,77 +195,6 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
         </td>
       )}
 
-      {/* {data?.status && (
-        <td className="px-4 text-sm whitespace-nowrap">
-          <span
-            className={`px-3 py-1 rounded-full font-semibold text-sm
-            ${
-              data.status === "Not Started"
-                ? "bg-yellow-100 text-yellow-800"
-                : data.status === "On Going"
-                  ? "bg-green-100 text-green-800"
-                  : data.status === "Stop"
-                    ? "bg-red-text"
-                    : data.status === "Pending"
-                      ? "bg-yellow-100 text-yellow-800"
-                      : data.status === "Approve"
-                        ? "bg-green-100 text-green-800"
-                        : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            {data.status}
-          </span>
-          <svg
-            className="w-2.5 h-2.5 ms-3"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 10 6"
-            onClick={() => setDropdownOpen(true)}
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 4 4 4-4"
-            />
-            
-          </svg>
-          {dropdownOpen && (
-            <div
-              className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark`}
-            >
-              <ul className="flex flex-col gap-5 border-b border-stroke px-6 py-7.5 dark:border-strokedark">
-                <li>
-                  <Link
-                    href="/profile"
-                    className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
-                  >
-                    My Profile
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
-                  >
-                    My Contacts
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/settings"
-                    className="flex items-center gap-3.5 text-sm font-medium duration-300 ease-in-out hover:text-primary lg:text-base"
-                  >
-                    Account Settings
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          )}
-        </td>
-      )} */}
 
       {data?.status && (
         <td className="px-4 text-sm whitespace-nowrap">

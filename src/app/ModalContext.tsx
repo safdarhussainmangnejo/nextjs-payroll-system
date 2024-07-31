@@ -1,7 +1,8 @@
 // src/app/ModalContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type ModalType = 'mentorEvaluation' | 'inputTutorEvaluation' | 'addStudentAccount' | 'addTutor' |'addMetor'| 'addFee' | 'addDatabaseTutorMentor' | null;
+type ModalType = 'mentorEvaluation' | 'inputTutorEvaluation' | 'addStudentAccount' | 'addTutor' |'addMetor'| 'addFee' | 'addDatabaseTutorMentor' | 
+'addSchedule' | null;
 interface ModalContextType {
   // isModalOpen: boolean;
   // openModal: () => void;

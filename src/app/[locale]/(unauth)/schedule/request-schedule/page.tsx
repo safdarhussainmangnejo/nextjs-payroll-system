@@ -1,5 +1,6 @@
 "use client";
 import { useModal } from "@/app/ModalContext";
+import Accordion from "@/components/Accordians/Accordion";
 import CustomTable from "@/components/Custom/CustomTable";
 import DatePicker from "@/components/Custom/DatePicker";
 import Dropdown from "@/components/Custom/Dropdown";
@@ -9,9 +10,11 @@ import RequestScheduleDetailsPage from "@/components/DetailPages/RequestSchedule
 import { DocumentCategoryEnum, FORMMODE } from "@/utils/Constants";
 import {
   columnsRequestScheduleMentor,
+  columnsScheduleMentorAccordian,
   rowsAddMentor,
   rowsClassData,
   rowsRequestScheduleMentor,
+  rowsScheduleMentorAccordian,
 } from "@/utils/DummyData";
 import { useState } from "react";
 // import React, { useState } from "react";
@@ -227,24 +230,47 @@ const RequestSchedule: React.FC = () => {
               ? rowsRequestScheduleMentor.length > 0
               : rowsRequestScheduleMentor.length > 0
           ) ? (
-            <CustomTable
-              columns={
-                activeTab === "tutor"
-                  ? columnsRequestScheduleMentor
-                  : columnsRequestScheduleMentor
-              }
-              rows={
-                activeTab === "tutor"
-                  ? rowsRequestScheduleMentor
-                  : rowsRequestScheduleMentor
-              }
-              tableType={
-                activeTab === "tutor"
-                  ? DocumentCategoryEnum.RequestSchedule
-                  : DocumentCategoryEnum.RequestSchedule
-              }
-              onViewClick={handleViewClick}
-            />
+            <>
+              <CustomTable
+                columns={
+                  activeTab === "tutor"
+                    ? columnsRequestScheduleMentor
+                    : columnsRequestScheduleMentor
+                }
+                rows={
+                  activeTab === "tutor"
+                    ? rowsRequestScheduleMentor
+                    : rowsRequestScheduleMentor
+                }
+                tableType={
+                  activeTab === "tutor"
+                    ? DocumentCategoryEnum.RequestSchedule
+                    : DocumentCategoryEnum.RequestSchedule
+                }
+                onViewClick={handleViewClick}
+              />
+              <div className="p-4 mt-8">
+                <h1 className="text-2xl font-bold mb-6">
+                  Request Schedule Mentor
+                </h1>
+                <Accordion title="Wednesday, June 20th 2024">
+                  <CustomTable
+                    columns={columnsScheduleMentorAccordian}
+                    rows={rowsScheduleMentorAccordian}
+                    tableType={DocumentCategoryEnum.RequestSchedule}
+                    onViewClick={handleViewClick}
+                  />
+                </Accordion>
+                <Accordion title="Kemis, June 20th 2024">
+                  <CustomTable
+                    columns={columnsScheduleMentorAccordian}
+                    rows={rowsScheduleMentorAccordian}
+                    tableType={DocumentCategoryEnum.RequestSchedule}
+                    onViewClick={handleViewClick}
+                  />
+                </Accordion>
+              </div>
+            </>
           ) : (
             <MentorEvaluation
               imageSrc="/assets/attendance.png"

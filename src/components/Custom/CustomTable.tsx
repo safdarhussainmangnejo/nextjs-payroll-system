@@ -7,6 +7,7 @@ import PreseniRows from "../BonusMentorTable/PresensiRows";
 import EvaluasiTutorRows from "../BonusMentorTable/EvaluasiTutorRows";
 import StudentAccountRows from "../BonusMentorTable/StudentAccountRows";
 import SessionPackageDataRows from "../BonusMentorTable/SessionPackageDataRows";
+import { useModal } from "@/app/ModalContext";
 interface Column {
   id: string;
   label: string;
@@ -32,6 +33,7 @@ const CustomTable = ({
   onViewClick = () => console.log("onViewClick clicked"),
   tableType,
 }: DataTableProps) => {
+  const { showModal } = useModal();
   return (
     <>
       {rows && (
@@ -97,21 +99,38 @@ const CustomTable = ({
                               DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
                             ) : tableType ===
+                              DocumentCategoryEnum.ScheduleMentor ? (
+                                <TableRow data={row} tableType={tableType}/>
+                            )
+                            : (tableType ===
                                 DocumentCategoryEnum.SessionPackageData ||
                               DocumentCategoryEnum.ClassData ||
                               DocumentCategoryEnum.AddMetor ||
                               DocumentRowsEnum.DatabaseStudent ||
                               DocumentCategoryEnum.RequestSchedule ||
-                              DocumentRowsEnum.RequestScheduleTimeList ? (
+                              DocumentRowsEnum.RequestScheduleTimeList) ? (
                               <SessionPackageDataRows
                                 data={row}
                                 tableType={tableType}
                               />
                             ) : (
-                              <TableRow data={row} />
+                              <TableRow data={row} tableType={tableType}/>
                             )}
                             <td className="px-4 py-4 text-sm whitespace-nowrap">
                               <div className="flex items-center gap-x-3">
+                                {tableType === DocumentRowsEnum.RequestScheduleTimeList ? 
+                                (<button
+                                  className="px-9 py-2.5 bg-blue-800 text-white flex items-center rounded-full btn-open-modal"
+                                  onClick={ () => showModal("addSchedule")
+                                  }
+                                >
+                                  <span >
+                                    
+                                      Add
+                                  </span>
+                                </button>)
+                                :
+                                (<>
                                 <img
                                   src="/icons/view.png"
                                   alt="View"
@@ -133,6 +152,9 @@ const CustomTable = ({
                                     />
                                   </>
                                 )}
+                                </>)
+                                }
+                                
                               </div>
                             </td>
                           </tr>

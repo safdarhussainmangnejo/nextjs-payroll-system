@@ -313,3 +313,42 @@ export const rowsRequestScheduleTimeList = [
   {id:3, date: '01 Mar 2023', from: '08:00 WIB', to:'09:00 WIB', status: 'Fix Schedule'},
 
 ];
+
+// Request Schedule Mentor Rows and Colums
+export const columnsScheduleMentorAccordian= [
+  // { id: 'no', label: 'No', minWidth: 50 },
+  { id: 'tutor', label: 'Tutor', minWidth: 140 },
+  { id: 'from', label: 'From', minWidth: 80 },
+  { id: 'to', label: 'Until', minWidth: 80 },
+  { id: 'actions', label: 'Actions', minWidth: 50 }
+];
+export const rowsScheduleMentorAccordian = [
+  {id:1, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '14:00', to:'16:00'},
+  {id:2, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '14:00', to:'16:00'},
+  {id:3, name: 'Pristia Candra', email: 'lincoln@unpixel.com', from: '14:00', to:'16:00'},
+  
+];
+
+//  Schedule Mentor Rows and Colums
+export const columnsScheduleMentor= [
+  { id: 'no', label: 'No', minWidth: 20 },
+  { id: 'date', label: 'Date', minWidth: 80 },
+  { id: 'mentor', label: 'Mentor', minWidth: 50 },
+  { id: 'classCode', label: 'Class Code', minWidth: 50 },
+  { id: 'className', label: 'Class Name', minWidth: 70 },
+  { id: 'period', label: 'Period', minWidth: 100 },
+  { id: 'service', label: 'Service', minWidth: 100 },
+  { id: 'from', label: 'From', minWidth: 50 },
+  { id: 'to', label: 'Until', minWidth: 50 },
+  { id: 'actions', label: 'Actions', minWidth: 100 }
+];
+export const rowsScheduleMentor= [
+  {id: 1, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 2, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 3, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 4, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 5, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 6, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 7, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+  {id: 8, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+]

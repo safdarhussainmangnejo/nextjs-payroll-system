@@ -10,6 +10,7 @@ export const DocumentCategoryEnum = {
   AddMetor: 'Add Metor',
   Database: 'Database',
   RequestSchedule: 'RequestSchedule',
+  ScheduleMentor: 'Schedule Mentor',
 }
 
 export const DocumentRowsEnum = {
