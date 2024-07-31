@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.11.0...v1.12.0) (2024-07-29)
+
+
+### Features
+
+* added request schedule pages, and tables ([d4fc352](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/d4fc352c76491b3c1118ceb82217b3d0b53fe047))
+
 # [1.11.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.10.0...v1.11.0) (2024-07-28)
 
 
