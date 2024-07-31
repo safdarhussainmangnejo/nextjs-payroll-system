@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.12.0...v1.13.0) (2024-07-31)
+
+
+### Features
+
+* added modal for add schedule, added new pages ([07264d8](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/07264d8f031a3d920eef29c88c79a842f7855dda))
+
 # [1.12.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.11.0...v1.12.0) (2024-07-29)
 
 
