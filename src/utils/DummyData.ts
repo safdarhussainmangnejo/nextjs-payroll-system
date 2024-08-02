@@ -351,4 +351,78 @@ export const rowsScheduleMentor= [
   {id: 6, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
   {id: 7, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
   {id: 8, date: '01 Mar 2023', mentor: 'Nama User', classCode: 'Class Code', className:'KOWI WIT 2', period:'September - October', service:'Proofreading', from:'14:00', to:'15:00'},
+
 ]
+
+//  Schedule Tutor Class Rows and Colums
+export const columnsScheduleTutorClass= [
+  { id: 'no', label: 'No', minWidth: 30 },
+  { id: 'date', label: 'Date', minWidth: 80 },
+  { id: 'mentor', label: 'Mentor', minWidth: 70 },
+  { id: 'className', label: 'Class Name', minWidth: 90 },
+  { id: 'period', label: 'Period', minWidth: 100 },
+  { id: 'from', label: 'From', minWidth: 50 },
+  { id: 'to', label: 'Until', minWidth: 80 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+export const rowsScheduleTutorClass= [
+  {id: 1, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 2, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 3, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 4, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 5, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 6, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 7, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  {id: 8, date: '01 Mar 2023', mentor: 'Nama User', className:'KOWI WIT 2', period:'September - October', from:'14:00', to:'15:00'},
+  
+];
+//  Schedule Tutor Mockup Rows and Colums
+export const columnsScheduleTutorMockup= [
+  { id: 'no', label: 'No', minWidth: 30 },
+  { id: 'date', label: 'Date', minWidth: 80 },
+  { id: 'mentor', label: 'Mentor', minWidth: 70 },
+  { id: 'mockupType', label: 'Mockup Type', minWidth: 70 },
+  { id: 'studentName', label: 'Student', minWidth: 90 },
+  { id: 'startDate', label: 'Start', minWidth: 50 },
+  { id: 'endDate', label: 'End', minWidth: 50 },
+  { id: 'file', label: 'File', minWidth: 50 },
+  { id: 'status', label: 'Status', minWidth: 80 },
+  { id: 'actions', label: 'Actions', minWidth: 150 }
+];
+export const rowsScheduleTutorMockup= [
+  {id: 1, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Upcoming'},
+  {id: 2, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Waiting'},
+  {id: 3, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Waiting'},
+  {id: 4, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Upcoming'},
+  {id: 5, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Confirm'},
+  {id: 6, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Upcoming'},
+  {id: 7, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Confirm'},
+  {id: 8, date: '10/06/20254', mentor: 'Nama User', mockupType:'Type', studentName:'Student Name', startDate:'10/06/2024, 14:00 WIB', endDate:'10/06/2024, 14:00 WIB', file: 'file.pdf', status:'Confirm'},
+  
+];
+
+//  Schedule Tutor Assessment Rows and Colums
+export const columnsScheduleTutorAssessment = [
+  { id: 'no', label: 'No', minWidth: 30 },
+  { id: 'date', label: 'Date', minWidth: 60 },
+  { id: 'mentor', label: 'Mentor', minWidth: 50 },
+  { id: 'AttendanceType', label: 'Attendance Type', minWidth: 60 },
+  { id: 'period', label: 'Period', minWidth: 40 },
+  { id: 'assessmentType', label: 'Assessment Type', minWidth: 50 },
+  { id: 'participant', label: 'Participant', minWidth: 40 },
+  { id: 'nameOfParticipants', label: 'Name Of Participants', minWidth: 80 },
+  { id: 'file', label: 'Feedback', minWidth: 40 },
+  { id: 'status', label: 'Status', minWidth: 80 },
+  { id: 'actions', label: 'Actions', minWidth: 100 }
+];
+export const rowsScheduleTutorAssessment= [
+  {id: 1, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Waiting'},
+  {id: 2, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Confirm'},
+  {id: 3, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Confirm'},
+  {id: 4, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Waiting'},
+  {id: 5, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Confirm'},
+  {id: 6, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Waiting'},
+  {id: 7, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Confirm'},
+  {id: 8, date: '10/06/20254', mentor: 'Tutor User', AttendanceType:'Type', period:'January', assessmentType:'Writing', participant:'2 people', nameOfParticipants: 'Name 1, Name 2', file: 'file.pdf', status:'Waiting'},
+  
+];

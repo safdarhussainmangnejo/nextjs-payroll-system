@@ -22,7 +22,8 @@ import { useState } from "react";
 const RequestSchedule: React.FC = () => {
   // const { openModal } = useModal();
   const { showModal } = useModal();
-  const [activeTab, setActiveTab] = useState("tutor"); // Default active tab
+  const [activeTab, setActiveTab] = useState("mentor"); // Default active tab
+  const [activeTableView, setActiveTableView] = useState("grid"); // Default active table view
   const [selectedRow, setSelectedRow] = useState<any>(null);
   const [mode, setMode] = useState(FORMMODE.Disabled);
 
@@ -128,57 +129,66 @@ const RequestSchedule: React.FC = () => {
             </button>
           </div>
 
-          <div className="p-4 mt-5">
-            {/* <h1 className="text-2xl font-bold mb-4">Mentor</h1> */}
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              {/* flex-1 for equal width distribution, min-w-0 to prevent overflow */}
-              <div className="flex-1 min-w-0">
-                <h1 className="text-2xl font-bold truncate heading-font-weight-color">
-                  {activeTab === "tutor" ? "Tutor" : "Mentor"}
-                </h1>
-              </div>
+            <div className="p-4 mt-5">
+              <div className="flex flex-wrap items-center justify-between gap-4">
+                {/* Heading on the left side */}
+                <div className="flex items-center flex-1 min-w-0">
+                  <h1 className="text-2xl font-bold truncate heading-font-weight-color">
+                    {activeTab === "tutor" ? "Tutor" : "Mentor"}
+                  </h1>
+                </div>
 
-              {(activeTab === "tutor"
+                {(activeTab === "tutor"
                 ? rowsClassData.length > 0
                 : rowsAddMentor.length > 0) && (
                 <>
-                  {/* flex-1 for equal width, but with max-width to control size on larger screens */}
-                  <div className="flex-1 max-w-sm min-w-0 ml-10">
+                   <div className="flex items-center space-x-4">
                     <SearchInput />
                   </div>
 
-                  {/* flex-1 for equal width, button container flex to center button horizontally */}
-                  <div className="flex-1 min-w-0 flex justify-center">
+                  <div className="flex items-center space-x-4">
                     <button
                       className="px-8 py-2.5 viewlist-button-class text-white flex items-center rounded btn-open-modal"
                       onClick={
-                        activeTab === "tutor"
-                          ? () => showModal("addTutor")
-                          : () => showModal("addMetor")
+                        activeTableView === "grid"
+                          ? () => setActiveTableView("list")
+                          : () => setActiveTableView("grid")
                       }
                     >
                       <span className="mr-2">
-                        {activeTab === "tutor" ? "View: List" : "View: List"}
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1.2rem"
-                        height="1.2rem"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="none"
-                          stroke="white"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16"
-                        />
-                      </svg>
+                        {activeTableView === "grid" ? "View: List" : "View: Grid"}
+                        </span>
+                        {activeTableView === "grid" 
+                        ? 
+                        (<svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="1.2rem"
+                          height="1.2rem"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="none"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"
+                          />
+                        </svg>)
+                        :
+                        (<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+                          <g fill="none" fill-rule="evenodd">
+                            <path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                            <path fill="white" d="M9 13a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2zm10 0a2 2 0 0 1 1.995 1.85L21 15v4a2 2 0 0 1-1.85 1.995L19 21h-4a2 2 0 0 1-1.995-1.85L13 19v-4a2 2 0 0 1 1.85-1.995L15 13zM9 15H5v4h4zm10 0h-4v4h4zm0-12a2 2 0 0 1 1.995 1.85L21 5v4a2 2 0 0 1-1.85 1.995L19 11h-4a2 2 0 0 1-1.995-1.85L13 9V5a2 2 0 0 1 1.85-1.995L15 3zM9 3a2 2 0 0 1 1.995 1.85L11 5v4a2 2 0 0 1-1.85 1.995L9 11H5a2 2 0 0 1-1.995-1.85L3 9V5a2 2 0 0 1 1.85-1.995L5 3zm10 2h-4v4h4zM9 5H5v4h4z" />
+                          </g>
+                        </svg>)
+                        }
+                      
+                      
                     </button>
                   </div>
 
-                  <div className="flex-1 min-w-0 flex justify-center">
+                  <div className="flex items-center space-x-4">
                     <button
                       className="px-7 py-2.5 bg-gray-800 text-white flex items-center rounded btn-open-modal"
                       onClick={
@@ -211,7 +221,8 @@ const RequestSchedule: React.FC = () => {
                   </div>
                 </>
               )}
-            </div>
+              </div>
+           
 
             <div className="flex justify-between space-x-2 mb-4 mt-3">
               <div className="flex-1">
@@ -225,11 +236,10 @@ const RequestSchedule: React.FC = () => {
               </div>
             </div>
           </div>
-          {(
-            activeTab === "tutor"
-              ? rowsRequestScheduleMentor.length > 0
-              : rowsRequestScheduleMentor.length > 0
-          ) ? (
+          {(activeTab === "tutor"
+            ? rowsRequestScheduleMentor.length > 0
+            : rowsRequestScheduleMentor.length > 0) &&
+          activeTableView === "grid" ? (
             <>
               <CustomTable
                 columns={
@@ -249,28 +259,32 @@ const RequestSchedule: React.FC = () => {
                 }
                 onViewClick={handleViewClick}
               />
-              <div className="p-4 mt-8">
-                <h1 className="text-2xl font-bold mb-6">
-                  Request Schedule Mentor
-                </h1>
-                <Accordion title="Wednesday, June 20th 2024">
-                  <CustomTable
-                    columns={columnsScheduleMentorAccordian}
-                    rows={rowsScheduleMentorAccordian}
-                    tableType={DocumentCategoryEnum.RequestSchedule}
-                    onViewClick={handleViewClick}
-                  />
-                </Accordion>
-                <Accordion title="Kemis, June 20th 2024">
-                  <CustomTable
-                    columns={columnsScheduleMentorAccordian}
-                    rows={rowsScheduleMentorAccordian}
-                    tableType={DocumentCategoryEnum.RequestSchedule}
-                    onViewClick={handleViewClick}
-                  />
-                </Accordion>
-              </div>
             </>
+          ) : (activeTab === "tutor"
+              ? rowsRequestScheduleMentor.length > 0
+              : rowsRequestScheduleMentor.length > 0) &&
+            activeTableView === "list" ? (
+            <div className="p-4">
+              <h1 className="text-2xl font-bold mb-6">
+                Request Schedule Mentor
+              </h1>
+              <Accordion title="Wednesday, June 20th 2024">
+                <CustomTable
+                  columns={columnsScheduleMentorAccordian}
+                  rows={rowsScheduleMentorAccordian}
+                  tableType={DocumentCategoryEnum.RequestSchedule}
+                  onViewClick={handleViewClick}
+                />
+              </Accordion>
+              <Accordion title="Kemis, June 20th 2024">
+                <CustomTable
+                  columns={columnsScheduleMentorAccordian}
+                  rows={rowsScheduleMentorAccordian}
+                  tableType={DocumentCategoryEnum.RequestSchedule}
+                  onViewClick={handleViewClick}
+                />
+              </Accordion>
+            </div>
           ) : (
             <MentorEvaluation
               imageSrc="/assets/attendance.png"

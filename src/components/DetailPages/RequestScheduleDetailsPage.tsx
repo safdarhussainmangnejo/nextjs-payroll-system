@@ -91,7 +91,6 @@ const RequestScheduleDetailsPage: React.FC<EvaluasiDetailProps> = ({
         imageUrl={"/assets/user-02.png"}
       />
 
-
       <div className="flex mt-5">
         <div className=" flex-1 w-32 p-4 bg-white rounded-lg border-[1.5px] border-stroke bg-transparent border-inherit mb-6 dark:bg-gray-800 dark:border-gray-700">
           <div className="flex justify-between">
@@ -181,15 +180,16 @@ const RequestScheduleDetailsPage: React.FC<EvaluasiDetailProps> = ({
       </div>
 
       <div className="p-4 mt-5">
-        <div className="flex flex-wrap justify-between gap-8">
-          {/* flex-1 for equal width distribution, min-w-0 to prevent overflow */}
-          <div className="flex-1 min-w-0">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          {/* Heading on the left side */}
+          <div className="flex items-center flex-1 min-w-0">
             <h1 className="text-2xl font-bold truncate heading-font-weight-color">
               Request Time List
             </h1>
           </div>
 
-          <div className="flex-1 min-w-0 flex items-right">
+          {/* Right-aligned components */}
+          <div className="flex items-center space-x-4">
             <button
               className="px-7 py-2.5 bg-gray-800 text-white flex items-center rounded btn-open-modal"
               onClick={() => showModal("addTutor")}
@@ -201,16 +201,22 @@ const RequestScheduleDetailsPage: React.FC<EvaluasiDetailProps> = ({
                 viewBox="0 0 24 24"
               >
                 <path
-                  fill="currentColor"
-                  d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z"
+                  fill="none"
+                  stroke="white"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 12v6m0 0l3-2m-3 2l-3-2m4-13H8.2c-1.12 0-1.68 0-2.108.218a1.999 1.999 0 0 0-.874.874C5 4.52 5 5.08 5 6.2v11.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218c.377-.192.683-.498.875-.874c.218-.428.218-.986.218-2.104V9m-6-6c.286.003.466.014.639.055c.204.05.399.13.578.24c.202.124.375.297.72.643l3.126 3.125c.346.346.518.518.642.72c.11.18.19.374.24.578c.04.173.051.354.054.639M13 3v2.8c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h2.802m0 0H19"
                 />
               </svg>
               <span className="ml-2">Add Schedule</span>
             </button>
           </div>
         </div>
+      </div>
 
-        <div className="flex justify-between space-x-2 mb-4 mt-3">
+      <div className="p-4">
+        <div className="flex justify-between space-x-2 mb-4 ">
           <div className="flex-1">
             <DatePicker />
           </div>

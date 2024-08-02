@@ -55,7 +55,7 @@ const StudentAccountModal = () => {
                   className="mt-1 block w-full px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                 />
               </div>
-              <div className="flex items-center justify-between">
+              <div className="flex space-x-4">
                 <button
                   type="button"
                   onClick={closeModal}

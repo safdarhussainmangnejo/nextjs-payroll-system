@@ -1,5 +1,5 @@
-import { DocumentCategoryEnum } from "@/utils/Constants";
-import React from "react";
+'use client';
+import React, { useState } from "react";
 
 interface TableRowProps {
   data: {
@@ -16,6 +16,15 @@ interface TableRowProps {
     service: string;
     from: string;
     to: string;
+    mockupType: string;
+    studentName: string;
+    startDate: string;
+    file: string;
+    status: string;
+    AttendanceType: string;
+    assessmentType: string;
+    nameOfParticipants: string;
+    participant: string;
   };
   tableType?: string;
 }
@@ -24,6 +33,15 @@ const TableRow: React.FC<TableRowProps> = ({
   data,
   tableType,
 }: TableRowProps) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [userData, setUserData] = useState<string[]>([]);
+  const updateStatus = (newStatus: string) => {
+    setUserData((prevData) => ({
+        ...prevData,
+        status: newStatus
+    }));
+    setDropdownOpen(false); // Close dropdown after selection
+  };
   return (
     <>
       <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
@@ -55,13 +73,8 @@ const TableRow: React.FC<TableRowProps> = ({
         {data.eventName || data.mentor}
       </td>
 
-      {/* <td className="px-4  text-sm font-medium text-gray-700 whitespace-nowrap">
-        <div className="inline-flex items-center px-3 py-1 rounded-full gap-x-2 text-emerald-500 bg-emerald-100/60 dark:bg-gray-800">
-          <h2 className="text-sm font-normal">{data.eventName || data.mentor}</h2>
-        </div>
-      </td> */}
 
-      {tableType != DocumentCategoryEnum.ScheduleMentor && (
+      {(data?.name && data?.email) && (
         <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
           <div className="flex items-center gap-x-2">
             <img
@@ -85,37 +98,21 @@ const TableRow: React.FC<TableRowProps> = ({
       )}
 
       <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data.endDate || data.classCode}
+        {data.mockupType || data.AttendanceType || data.endDate || data.className || data?.classCode}
       </td>
 
       <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data?.className}
+        {data?.period || data?.className || data.studentName}
       </td>
 
-      <td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
-        {data?.period}
-      </td>
+      {(data?.service || data?.assessmentType) && 
+        (<td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+          {data?.period || data?.assessmentType}
+        </td>)
+      }
 
-      {data?.service && (
-        <td className="px-4 text-sm whitespace-nowrap">
-          <span
-            className={`px-3 py-1 rounded-full font-semibold text-sm
-            ${
-              data.service === "Cicil"
-                ? "bg-yellow-100 text-yellow-800"
-                : data.service === "Proofreading"
-                  ? "bg-green-100 text-green-800"
-                  : data.service === "Stop"
-                    ? "redchip"
-                    : "bg-gray-100 text-gray-800"
-            }`}
-          >
-            {data.service}
-          </span>
-        </td>
-      )}
-
-      <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+      { (data.from || data.startDate) &&
+      (<td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
         <div className="inline-flex items-center gap-x-3">
           {data?.from && (
             <svg
@@ -133,13 +130,20 @@ const TableRow: React.FC<TableRowProps> = ({
               </g>
             </svg>
           )}
-          <span>{data.from}</span>
+          {data?.startDate && 
+          (<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+            <path fill="black" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z" />
+          </svg>)
+        }
+          <span>{data.from || data.startDate}</span>
         </div>
-      </td>
-
-      <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
+      </td>)
+      }
+      
+      {(data.to || data.endDate) && 
+      (<td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
         <div className="inline-flex items-center gap-x-3">
-          {data?.to && (
+        {data?.to && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="1.2rem"
@@ -154,10 +158,104 @@ const TableRow: React.FC<TableRowProps> = ({
                 />
               </g>
             </svg>
-          )}
-          <span>{data.to}</span>
+          ) }
+          {data?.endDate && 
+          (<svg xmlns="http://www.w3.org/2000/svg" width="1.2rem" height="1.2rem" viewBox="0 0 24 24">
+            <path fill="black" d="M19 4h-2V3a1 1 0 0 0-2 0v1H9V3a1 1 0 0 0-2 0v1H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7h16Zm0-9H4V7a1 1 0 0 1 1-1h2v1a1 1 0 0 0 2 0V6h6v1a1 1 0 0 0 2 0V6h2a1 1 0 0 1 1 1Z" />
+          </svg>)
+        }
+          <span>{data.to || data.endDate}</span>
         </div>
-      </td>
+      </td>)
+      }
+      
+
+      {(data?.participant) && 
+        (<td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+          {data?.participant }
+        </td>)
+      }
+
+      {(data?.nameOfParticipants) && 
+        (<td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+          {data?.nameOfParticipants }
+        </td>)
+      }
+
+      {(data?.file) && 
+        (<td className="px-4  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+          {data?.file }
+        </td>)
+      }
+
+{data?.status && (
+        <td className="px-4 text-sm whitespace-nowrap">
+          <div className="flex items-center space-x-2">
+          <span
+            className={`px-3 py-1 rounded-full font-semibold text-sm
+            ${
+              data.service === "Cicil"
+                ? "bg-yellow-100 text-yellow-800"
+                : data.service === "Proofreading"
+                  ? "bg-green-100 text-green-800"
+                  : data.service === "Stop"
+                    ? "redchip" 
+                  : data.status === 'Upcoming'
+                  ? "bg-purple-100 text-purple-800"
+                  : data.status === 'Waiting'
+                  ? "bg-yellow-100 text-yellow-800"
+                  : data.status === 'Confirm'
+                  ? "bg-green-100 text-green-800"
+                    : "bg-gray-100 text-gray-800"
+            }`}
+          >
+            {data.service || data.status}
+          </span>
+          {/* Dropdown Icon */}
+          <div className="relative">
+              <svg
+                className="cursor-pointer w-4 h-4" // Removed ml-2 for direct control below
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 7l5 5 5-5"
+                />
+              </svg>
+              {/* Dropdown Menu */}
+              {dropdownOpen && (
+                <ul className="absolute right-0 z-10 mt-1 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <li
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+                    onClick={() => updateStatus("Approve")}
+                  >
+                    Approve
+                  </li>
+                  <li
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+                    onClick={() => updateStatus("Disapprove")}
+                  >
+                    Disapprove
+                  </li>
+                  <li
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100"
+                    onClick={() => updateStatus("Pending")}
+                  >
+                    Pending
+                  </li>
+                </ul>
+              )}
+            </div>
+            </div>
+        </td>
+      )}
 
     </>
   );

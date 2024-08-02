@@ -49,7 +49,7 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
   };
   return (
     <>
-      {tableType != DocumentCategoryEnum.RequestSchedule  && (
+      {tableType !== DocumentCategoryEnum.RequestSchedule  && (
         <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
           <div className="inline-flex items-center gap-x-3">
             {data?.date && (

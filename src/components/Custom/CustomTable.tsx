@@ -92,23 +92,20 @@ const CustomTable = ({
                               <BonusTableRow data={row} />
                             ) : tableType === DocumentCategoryEnum.Presensi ? (
                               <PreseniRows data={row} />
-                            ) : tableType ===
-                              DocumentCategoryEnum.EvaluasiTutor ? (
+                            ) : tableType === DocumentCategoryEnum.EvaluasiTutor ? (
                               <EvaluasiTutorRows data={row} />
-                            ) : tableType ===
-                              DocumentCategoryEnum.StudentAccount ? (
+                            ) : tableType === DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
                             ) : tableType ===
-                              DocumentCategoryEnum.ScheduleMentor ? (
+                              DocumentCategoryEnum.ScheduleMentor || DocumentCategoryEnum.ScheduleTutor ? (
                                 <TableRow data={row} tableType={tableType}/>
-                            )
-                            : (tableType ===
+                            ) : tableType ===
                                 DocumentCategoryEnum.SessionPackageData ||
                               DocumentCategoryEnum.ClassData ||
                               DocumentCategoryEnum.AddMetor ||
                               DocumentRowsEnum.DatabaseStudent ||
                               DocumentCategoryEnum.RequestSchedule ||
-                              DocumentRowsEnum.RequestScheduleTimeList) ? (
+                              DocumentRowsEnum.RequestScheduleTimeList ? (
                               <SessionPackageDataRows
                                 data={row}
                                 tableType={tableType}

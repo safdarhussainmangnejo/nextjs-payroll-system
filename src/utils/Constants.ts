@@ -9,8 +9,9 @@ export const DocumentCategoryEnum = {
   ClassData: 'Class Data',
   AddMetor: 'Add Metor',
   Database: 'Database',
-  RequestSchedule: 'RequestSchedule',
+  RequestSchedule: 'Request Schedule',
   ScheduleMentor: 'Schedule Mentor',
+  ScheduleTutor: 'Schedule Tutor',
 }
 
 export const DocumentRowsEnum = {
@@ -27,6 +28,12 @@ export const ModalsEnumeration = {
   AddTutor: 'Add Tutor',
   AddMetor: 'Add Metor',
   AddDatabaseTutorMetor: 'Add Database Tutor Metor',
+}
+
+export const ScheduleTutorTabs ={
+  Class: 'class',
+  Mockup: 'mockup',
+  Assessment: 'assessment',
 }
 
 export const FORMMODE = {

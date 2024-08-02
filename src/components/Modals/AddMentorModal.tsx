@@ -87,7 +87,7 @@ const AddMentorModal = () => {
               </div>
                }
 
-              <div className="flex items-center justify-between">
+              <div className="flex space-x-4">
                 <button
                   type="button"
                   onClick={closeModal}
