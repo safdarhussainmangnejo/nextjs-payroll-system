@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.13.0...v1.14.0) (2024-08-02)
+
+
+### Features
+
+* added new pages, tables, components ([c88addb](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/c88addb315afdf1ea43f21c8297c92f97bef26c8))
+
 # [1.13.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.12.0...v1.13.0) (2024-07-31)
 
 
