@@ -92,66 +92,72 @@ const CustomTable = ({
                               <BonusTableRow data={row} />
                             ) : tableType === DocumentCategoryEnum.Presensi ? (
                               <PreseniRows data={row} />
-                            ) : tableType === DocumentCategoryEnum.EvaluasiTutor ? (
+                            ) : tableType ===
+                              DocumentCategoryEnum.EvaluasiTutor ? (
                               <EvaluasiTutorRows data={row} />
-                            ) : tableType === DocumentCategoryEnum.StudentAccount ? (
+                            ) : tableType ===
+                              DocumentCategoryEnum.StudentAccount ? (
                               <StudentAccountRows data={row} />
                             ) : tableType ===
-                              DocumentCategoryEnum.ScheduleMentor || DocumentCategoryEnum.ScheduleTutor ? (
-                                <TableRow data={row} tableType={tableType}/>
+                                DocumentCategoryEnum.RequestSchedule ||
+                              DocumentRowsEnum.RequestScheduleTimeList ||
+                              DocumentRowsEnum.RequestScheduleMentorAccordian ? (
+                              <SessionPackageDataRows
+                                data={row}
+                                tableType={tableType}
+                              />
                             ) : tableType ===
-                                DocumentCategoryEnum.SessionPackageData ||
-                              DocumentCategoryEnum.ClassData ||
-                              DocumentCategoryEnum.AddMetor ||
-                              DocumentRowsEnum.DatabaseStudent ||
-                              DocumentCategoryEnum.RequestSchedule ||
-                              DocumentRowsEnum.RequestScheduleTimeList ? (
+                                DocumentCategoryEnum.ScheduleMentor ||
+                              DocumentCategoryEnum.ScheduleTutor ? (
+                              <TableRow data={row} tableType={tableType} />
+                            ) : tableType ===
+                              (DocumentCategoryEnum.SessionPackageData ||
+                                DocumentCategoryEnum.ClassData ||
+                                DocumentCategoryEnum.AddMetor ||
+                                DocumentRowsEnum.DatabaseStudent) ? (
                               <SessionPackageDataRows
                                 data={row}
                                 tableType={tableType}
                               />
                             ) : (
-                              <TableRow data={row} tableType={tableType}/>
+                              <TableRow data={row} tableType={tableType} />
                             )}
                             <td className="px-4 py-4 text-sm whitespace-nowrap">
                               <div className="flex items-center gap-x-3">
-                                {tableType === DocumentRowsEnum.RequestScheduleTimeList ? 
-                                (<button
-                                  className="px-9 py-2.5 bg-blue-800 text-white flex items-center rounded-full btn-open-modal"
-                                  onClick={ () => showModal("addSchedule")
-                                  }
-                                >
-                                  <span >
-                                    
-                                      Add
-                                  </span>
-                                </button>)
-                                :
-                                (<>
-                                <img
-                                  src="/icons/view.png"
-                                  alt="View"
-                                  className="w-8 h-8 cursor-pointer"
-                                  onClick={() => onViewClick(row)}
-                                />
-                                {tableType != DocumentCategoryEnum.RequestSchedule && (
+                                {tableType ===
+                                DocumentRowsEnum.RequestScheduleTimeList ? (
+                                  <button
+                                    className="px-9 py-2.5 bg-blue-800 text-white flex items-center rounded-full btn-open-modal"
+                                    onClick={() => showModal("addSchedule")}
+                                  >
+                                    <span>Add</span>
+                                  </button>
+                                ) : (
                                   <>
                                     <img
-                                      src="/icons/edit.png"
-                                      alt="Edit"
+                                      src="/icons/view.png"
+                                      alt="View"
                                       className="w-8 h-8 cursor-pointer"
-                                      onClick={onEditClick}
+                                      onClick={() => onViewClick(row)}
                                     />
-                                    <img
-                                      src="/icons/delete.png"
-                                      alt="Delete"
-                                      className="w-8 h-8 cursor-pointer"
-                                    />
+                                    {tableType !=
+                                      DocumentCategoryEnum.RequestSchedule && (
+                                      <>
+                                        <img
+                                          src="/icons/edit.png"
+                                          alt="Edit"
+                                          className="w-8 h-8 cursor-pointer"
+                                          onClick={onEditClick}
+                                        />
+                                        <img
+                                          src="/icons/delete.png"
+                                          alt="Delete"
+                                          className="w-8 h-8 cursor-pointer"
+                                        />
+                                      </>
+                                    )}
                                   </>
                                 )}
-                                </>)
-                                }
-                                
                               </div>
                             </td>
                           </tr>
@@ -163,96 +169,98 @@ const CustomTable = ({
             </div>
           </div>
 
-          <div className="flex items-center justify-between mt-6">
-            <a
-              href="#"
-              className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5 rtl:-scale-x-100"
+          {tableType !== DocumentRowsEnum.RequestScheduleMentorAccordian && (
+            <div className="flex items-center justify-between mt-6">
+              <a
+                href="#"
+                className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-5 h-5 rtl:-scale-x-100"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+                  />
+                </svg>
 
-              <span>previous</span>
-            </a>
+                <span>previous</span>
+              </a>
 
-            <div className="items-center hidden md:flex gap-x-3">
+              <div className="items-center hidden md:flex gap-x-3">
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-blue-500 rounded-md dark:bg-gray-800 bg-blue-100/60"
+                >
+                  1
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  2
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  3
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  ...
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  12
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  13
+                </a>
+                <a
+                  href="#"
+                  className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
+                >
+                  14
+                </a>
+              </div>
+
               <a
                 href="#"
-                className="px-2 py-1 text-sm text-blue-500 rounded-md dark:bg-gray-800 bg-blue-100/60"
+                className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
               >
-                1
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                2
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                3
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                ...
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                12
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                13
-              </a>
-              <a
-                href="#"
-                className="px-2 py-1 text-sm text-gray-500 rounded-md dark:hover:bg-gray-800 dark:text-gray-300 hover:bg-gray-100"
-              >
-                14
+                <span>Next</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-5 h-5 rtl:-scale-x-100"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                  />
+                </svg>
               </a>
             </div>
-
-            <a
-              href="#"
-              className="flex items-center px-5 py-2 text-sm text-gray-700 capitalize transition-colors duration-200 bg-white border rounded-md gap-x-2 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800"
-            >
-              <span>Next</span>
-
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-5 h-5 rtl:-scale-x-100"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
+          )}
         </section>
       )}
     </>

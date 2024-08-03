@@ -7,7 +7,7 @@ import Dropdown from "@/components/Custom/Dropdown";
 import MentorEvaluation from "@/components/Custom/MentorEvaluation";
 import SearchInput from "@/components/Custom/SearchInput";
 import RequestScheduleDetailsPage from "@/components/DetailPages/RequestScheduleDetailsPage";
-import { DocumentCategoryEnum, FORMMODE } from "@/utils/Constants";
+import { DocumentCategoryEnum, DocumentRowsEnum, FORMMODE } from "@/utils/Constants";
 import {
   columnsRequestScheduleMentor,
   columnsScheduleMentorAccordian,
@@ -272,7 +272,7 @@ const RequestSchedule: React.FC = () => {
                 <CustomTable
                   columns={columnsScheduleMentorAccordian}
                   rows={rowsScheduleMentorAccordian}
-                  tableType={DocumentCategoryEnum.RequestSchedule}
+                  tableType={DocumentRowsEnum.RequestScheduleMentorAccordian}
                   onViewClick={handleViewClick}
                 />
               </Accordion>
@@ -280,7 +280,7 @@ const RequestSchedule: React.FC = () => {
                 <CustomTable
                   columns={columnsScheduleMentorAccordian}
                   rows={rowsScheduleMentorAccordian}
-                  tableType={DocumentCategoryEnum.RequestSchedule}
+                  tableType={DocumentRowsEnum.RequestScheduleMentorAccordian}
                   onViewClick={handleViewClick}
                 />
               </Accordion>

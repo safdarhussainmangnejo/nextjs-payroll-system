@@ -1,4 +1,4 @@
-import { DocumentCategoryEnum } from "@/utils/Constants";
+import { DocumentCategoryEnum, DocumentRowsEnum } from "@/utils/Constants";
 import React, { useState } from "react";
 
 interface TableRowProps {
@@ -41,6 +41,7 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
 
   // Function to update the status in your data
   const updateStatus = (newStatus: string) => {
+    console.log("newStatus: ", newStatus)
     // setData((prevData) => ({
     //     ...prevData,
     //     status: newStatus
@@ -49,7 +50,7 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
   };
   return (
     <>
-      {tableType !== DocumentCategoryEnum.RequestSchedule  && (
+      {tableType !== DocumentCategoryEnum.RequestSchedule || DocumentRowsEnum.RequestScheduleMentorAccordian  && (
         <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">
           <div className="inline-flex items-center gap-x-3">
             {data?.date && (
@@ -70,7 +71,7 @@ const SessionPackageDataRows: React.FC<TableRowProps> = ({
         </td>
       )}
 
-      {tableType === DocumentCategoryEnum.RequestSchedule && (
+      {tableType === DocumentCategoryEnum.RequestSchedule || DocumentRowsEnum.RequestScheduleMentorAccordian && (
         <td className="px-2  text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
           <div className="flex items-center gap-x-4">
             <img

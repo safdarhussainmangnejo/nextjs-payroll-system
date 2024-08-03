@@ -56,6 +56,9 @@
   background-color: #FFEDEC;
   color: #E03137 !important;
 }
+.red-text {
+  color: #E03137 !important;
+}
 .redchip {
   background-color: rgb(254 226 226);
   color: rgb(153 27 27);

@@ -42,6 +42,8 @@ const TableRow: React.FC<TableRowProps> = ({
     }));
     setDropdownOpen(false); // Close dropdown after selection
   };
+  console.log("userData: ", userData)
+  console.log("tableType: ", tableType)
   return (
     <>
       <td className="px-4  text-sm font-medium text-gray-700 dark:text-gray-200 whitespace-nowrap">

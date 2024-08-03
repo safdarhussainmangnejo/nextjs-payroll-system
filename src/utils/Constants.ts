@@ -19,6 +19,7 @@ export const DocumentRowsEnum = {
   DatabaseMentor: 'Database Mentor',
   DatabaseFee: 'Database Fee',
   RequestScheduleTimeList: 'Request Schedule Time List',
+  RequestScheduleMentorAccordian: 'Request Schedule Mentor Accordian',
 }
 
 export const ModalsEnumeration = {

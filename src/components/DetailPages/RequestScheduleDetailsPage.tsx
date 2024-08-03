@@ -88,7 +88,7 @@ const RequestScheduleDetailsPage: React.FC<EvaluasiDetailProps> = ({
         name={"Pristia Candra"}
         role={"Mentor"}
         joinDate={"23 Feb 2023 - Present"}
-        imageUrl={"/assets/user-02.png"}
+        imageUrl={"/assets/user-female.png"}
       />
 
       <div className="flex mt-5">
