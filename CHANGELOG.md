@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.14.0...v1.15.0) (2024-08-03)
+
+
+### Features
+
+* added reset, update password, and opt pages ([bb0bc11](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/commit/bb0bc116dbde5f25d1de260ca69a93f6d66e36d2))
+
 # [1.14.0](https://github.com/safdarhussainmangnejo/nextjs-payroll-system/compare/v1.13.0...v1.14.0) (2024-08-02)
 
 
