@@ -1,8 +1,56 @@
-import React from "react";
+'use client';
+import React, { useState } from "react";
+// import { useRouter } from 'next/router';
 
 const LoginForm: React.FC = () => {
+
+  const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    // const router = useRouter();
+
+    const dummyEmail= 'demo@gmail.com';
+    const dummyPassword= '123'
+
+    const handleSubmit = async (e: React.FormEvent) => {
+      console.log("email: ", email);
+      console.log("password: ", password);
+        e.preventDefault();
+
+        try {
+
+            if(email == dummyEmail && password==dummyPassword){
+              window.location.href = '/';
+              // router.push('/');
+            }
+
+            setError("Email or Password Incorrect, please try again");
+            // const response = await fetch('/api/auth/signin', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify({ email, password }),
+            // });
+
+            // const data = await response.json();
+
+            // if (!response.ok) {
+            //     throw new Error(data.message);
+            // }
+
+            
+
+            // Handle successful sign-in (e.g., redirect to dashboard)
+        } catch (error: any) {
+            setError("Email or Password Incorrect, please try again");
+        }
+    };
+
+
   return (
-    <form className="w-full max-w-[480px]">
+    <form onSubmit={handleSubmit} className="w-full max-w-[480px]">
+      {error && <p className="text-red">{error}</p>}
       <div className="flex gap-0.5 mt-8 max-w-full text-sm leading-6 w-[480px] max-md:flex-wrap">
         <label htmlFor="email" className="text-gray-900">
           Email Address
@@ -11,13 +59,15 @@ const LoginForm: React.FC = () => {
       </div>
       <input
         type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         id="email"
         className="justify-center px-5 py-4 mt-2.5 max-w-full text-sm leading-6 text-gray-900 whitespace-nowrap rounded-xl border border-red-600 border-solid w-[480px] max-md:max-w-full"
         defaultValue="duarte@gmail.com"
         aria-invalid="true"
         aria-describedby="email-error"
       />
-      <div
+      {/* <div
         id="email-error"
         className="flex gap-1 mt-2.5 max-w-full text-xs leading-5 text-red-600 w-[480px] max-md:flex-wrap"
       >
@@ -30,7 +80,7 @@ const LoginForm: React.FC = () => {
         <div className="flex-1 max-md:max-w-full">
           The email you entered is not registered, please check again
         </div>
-      </div>
+      </div> */}
       <div className="flex gap-0.5 mt-6 max-w-full text-sm leading-6 whitespace-nowrap w-[480px] max-md:flex-wrap">
         <label htmlFor="password" className="text-gray-900">
           Password
@@ -41,6 +91,8 @@ const LoginForm: React.FC = () => {
       <div className="flex gap-2.5 px-5 py-4 mt-2.5 max-w-full rounded-xl border border-red-600 border-solid w-[480px] max-md:flex-wrap focus-within:border-black">
         <input
           type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           id="password"
           className="flex-1 min-w-0 px-0 py-0 bg-transparent border-none text-gray-900 focus:ring-0"
           style={{ outline: "none" }}

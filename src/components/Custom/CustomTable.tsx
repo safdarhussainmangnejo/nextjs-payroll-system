@@ -29,7 +29,6 @@ const CustomTable = ({
   columns,
   rows,
   onEditClick,
-  onDeleteClick,
   onViewClick = () => console.log("onViewClick clicked"),
   tableType,
 }: DataTableProps) => {

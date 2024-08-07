@@ -1,7 +1,4 @@
-"use client";
-import { columnsEvaluasiTutor, rowsEvaluasiTutor } from "@/utils/DummyData";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import React from "react";
 
 interface EvaluasiDetailProps {
   selectedRow: {

@@ -10,6 +10,7 @@ const Input: FC = () => {
     const { name, value } = event.target;
     setSearchTerm(value);
     console.log("Searching for:", searchTerm);
+    console.log("name:", name);
   };
 
   return (

@@ -8,7 +8,7 @@ import {
   rowsRequestScheduleTimeList,
 } from "@/utils/DummyData";
 import UserProfile from "../UserProfile";
-// import React, { useState } from "react";
+import React from "react";
 
 interface EvaluasiDetailProps {
   selectedRow: {
@@ -28,49 +28,44 @@ const RequestScheduleDetailsPage: React.FC<EvaluasiDetailProps> = ({
 }: EvaluasiDetailProps) => {
   const { showModal } = useModal();
 
-  const StatCard = ({ number, label }: any) => (
-    <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm bg-white">
-      <div>
-        <div className="text-2xl font-semibold">{number}</div>
-        <div className="text-sm text-gray-500">{label}</div>
-      </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1.2rem"
-        height="1.2rem"
-        viewBox="0 0 24 24"
-      >
-        <g fill="none">
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="1.3"
-            opacity="0.3"
-          />
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-width="1.3"
-            d="M12 17v-6"
-          />
-          <circle
-            cx="1"
-            cy="1"
-            r="1"
-            fill="currentColor"
-            transform="matrix(1 0 0 -1 11 9)"
-          />
-        </g>
-      </svg>
-    </div>
-  );
-
-  const stats = [
-    { number: 12, label: "Active Mentor" },
-    { number: 10, label: "Inactive Mentor" },
-  ];
+  // const StatCard = ({ number, label }: any) => (
+  //   <div className="flex items-center justify-between p-4 border rounded-lg shadow-sm bg-white">
+  //     <div>
+  //       <div className="text-2xl font-semibold">{number}</div>
+  //       <div className="text-sm text-gray-500">{label}</div>
+  //     </div>
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="1.2rem"
+  //       height="1.2rem"
+  //       viewBox="0 0 24 24"
+  //     >
+  //       <g fill="none">
+  //         <circle
+  //           cx="12"
+  //           cy="12"
+  //           r="10"
+  //           stroke="currentColor"
+  //           stroke-width="1.3"
+  //           opacity="0.3"
+  //         />
+  //         <path
+  //           stroke="currentColor"
+  //           stroke-linecap="round"
+  //           stroke-width="1.3"
+  //           d="M12 17v-6"
+  //         />
+  //         <circle
+  //           cx="1"
+  //           cy="1"
+  //           r="1"
+  //           fill="currentColor"
+  //           transform="matrix(1 0 0 -1 11 9)"
+  //         />
+  //       </g>
+  //     </svg>
+  //   </div>
+  // );
 
   // const [isModalOpen, setIsModalOpen] = useState(false);
 

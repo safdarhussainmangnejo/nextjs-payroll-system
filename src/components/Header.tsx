@@ -1,18 +1,14 @@
-'use client';
-
-import { useState } from 'react';
-
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-    }
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  //   if (darkMode) {
+  //     document.documentElement.classList.remove('dark');
+  //   } else {
+  //     document.documentElement.classList.add('dark');
+  //   }
+  // };
 
   return (
     

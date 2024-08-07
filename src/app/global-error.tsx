@@ -1,23 +1,43 @@
-'use client';
 
-import * as Sentry from '@sentry/nextjs';
-import Error from 'next/error';
-import { useEffect } from 'react';
+"use client";
 
-export default function GlobalError(props: {
-  error: Error & { digest?: string };
-  params: { locale: string };
-}) {
+import * as Sentry from "@sentry/nextjs";
+import Error from "next/error";
+import { useEffect } from "react";
+
+export default function GlobalError({ error }: { error: Error }) {
   useEffect(() => {
-    Sentry.captureException(props.error);
-  }, [props.error]);
+    Sentry.captureException(error);
+  }, [error]);
 
   return (
-    <html lang={props.params.locale}>
+    <html>
       <body>
-        {/* This is the default Next.js error component but it doesn't allow omitting the statusCode property yet. */}
-        <Error statusCode={undefined as any} />
+        {/* Your Error component here... */}      
       </body>
     </html>
   );
 }
+// 'use client';
+
+// import * as Sentry from '@sentry/nextjs';
+// import Error from 'next/error';
+// import { useEffect } from 'react';
+
+// export default function GlobalError(props: {
+//   error: Error & { digest?: string };
+//   params: { locale: string };
+// }) {
+//   useEffect(() => {
+//     Sentry.captureException(props.error);
+//   }, [props.error]);
+
+//   return (
+//     <html lang={props.params.locale}>
+//       <body>
+//         {/* This is the default Next.js error component but it doesn't allow omitting the statusCode property yet. */}
+//         <Error statusCode={undefined as any} />
+//       </body>
+//     </html>
+//   );
+// }

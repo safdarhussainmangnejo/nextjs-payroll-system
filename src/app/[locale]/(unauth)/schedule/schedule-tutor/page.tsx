@@ -248,7 +248,7 @@ const ScheduleTutor: React.FC = () => {
                       : rowsScheduleTutorAssessment
                 }
                 tableType={DocumentCategoryEnum.ScheduleTutor}
-                // onViewClick={handleViewClick}
+                onViewClick={handleViewClick}
               />
             </>
           ) : (

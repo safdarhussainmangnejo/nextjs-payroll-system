@@ -1,23 +1,19 @@
-'use client'
-import React, { useState } from "react";
 import DateRangePicker from "./DateRangePicker";
 import Dropdown from "./Dropdown";
 import SearchInput from "./SearchInput";
-import Table from "./UserTable";
-import CustomModal from "./CustomModal";
 import MentorEvaluation from "./MentorEvaluation";
 import CustomTable from "./CustomTable";
 
 const AttendanceList: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
+  // const handleOpenModal = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
   return (
     
     <div className="p-4">

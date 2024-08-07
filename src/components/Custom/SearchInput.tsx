@@ -17,7 +17,7 @@ const SearchInput: FC = () => {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    const { name, value } = event.target;
+    const { value } = event.target;
     setSearchTerm(value);
   };
 

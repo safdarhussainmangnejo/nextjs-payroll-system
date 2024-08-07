@@ -8,7 +8,7 @@ interface FeatureCardProps {
   className?: string;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, image, color, className = '' }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, image, color }) => {
   return (
     // <div className={`flex flex-col w-[33%] max-md:ml-0 max-md:w-full ${className}`}>
     <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
